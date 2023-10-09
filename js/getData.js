@@ -3,12 +3,12 @@ import { supa } from "/js/supabase.js";
 async function showPlants() {
     console.log("showPlants");
   const ul = document.querySelector('#list');
-  const { data: Plant, error } = await supa.from('Plant').select('*');
-  
+  const { data: plants, error } = await supa.from('Plant').select();
+  console.log(error);
 
 
-  console.log(Plant);
-  Plant.forEach(plant => {
+  console.log(plants);
+  plants.forEach(plant => {
     console.log(plant);
     const li = document.createElement('li');
     li.innerHTML = plant.title;
