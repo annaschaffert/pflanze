@@ -8,6 +8,57 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- HTML File auf der Root des Servers für Authentifizierung -->
+
+<!-- 
+
+    Kommentiere entweder den HTML-Block für die Password-Authentication resp. 
+    Magiclink-Authentication ein oder aus.
+    
+-->
+
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupaBase Auth </title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <h2>Magic Link Authentication</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="sendMagicLinkButton">Send Magic Link</button>
+    </div>
+
+    <p id="userStatus">Checking authentication status...</p>
+
+    <button id="logoutButton">Logout</button>
+
+    <script type="module" src="../../00_setup/supabase.js"></script>
+    <script type="module" src="03_authentication/1_magiclink.js"></script>
+
+</body>
+
+</html>
+
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+
 
 <!--- Logik von Login in Index-->
 
