@@ -1,6 +1,6 @@
 
         body {
-            background-image: url("scott-webb-eA2z1JSzZFI-unsplash.jpg");
+            background-image: url('../img/scott-webb-eA2z1JSzZFI-unsplash.jpg');
             background-repeat: no-repeat;
             background-size: cover;
         }
