@@ -24,8 +24,18 @@
 
 <body>
 <!-- Integration Supabase -->
-<script type="module" src="/supabase.js"></script>
+<script type="module" src="/js/supabase.js"></script>
    
+
+<!-- START Integration Datenbank Test -->
+
+    <ul id="list">
+    </ul>
+    <table id="table"></table>
+    <script type="module" src="/js/getData.js"></script>
+
+<!-- ENDE Integration Datenbank Test -->
+
 
 
 <!-- START Magiclink Authentication -->
@@ -42,8 +52,7 @@
 
     <button id="logoutButton">Logout</button>
 
-    <script type="module" src="/supabase.js"></script>
-    <script type="module" src="/magiclink.js"></script>
+    <script type="module" src="/js/magiclink.js"></script>
 
 <!-- ENDE Magiclink Authentication -->
 <!-- ENDE Magiclink Authentication -->
@@ -51,7 +60,7 @@
 <!-- ENDE Magiclink Authentication -->
 
 
-
+<script type="module" src="js/supabase.js"></script>
 </body>
 
 </html>
