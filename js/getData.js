@@ -11,7 +11,7 @@ async function showPlants() {
   plants.forEach(plant => {
     console.log(plant);
     const li = document.createElement('li');
-    li.innerHTML = plant.title;
+    li.innerHTML = plant.species;
     ul.appendChild(li);
   })
 }
