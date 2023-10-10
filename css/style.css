@@ -194,3 +194,24 @@ h2.registration{
 }
 
  
+
+/*pflanze-löschen-bestätigung*/
+
+.button_zurueck{
+    color: #F5F5F5;
+    background-color: #323232;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.button_zurueck:hover {
+    color: #323232;
+    background-color: #CEE6D8;
+}
+
+.container_erfolg {
+    text-align: center;   
+    padding-top: 250px;
+}
