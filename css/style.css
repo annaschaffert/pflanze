@@ -66,5 +66,55 @@ p{
     line-height: normal;
 }
 
+/*Buttons*/
+
+/* Buttons Startseite*/
+.button_startseite_registrieren{
+    color: #323232;
+}
+
+.button_startseite_anmelden{
+    color: #589A8D;
+}
+
+/* Buttons - Registrierung */
+.button_registrieung{
+    color: #589A8D;
+}
+
+
+/* Buttons - Home (Meine Pflanzen) */
+.button_meine_pflanzen_hinzufuegen{
+    color: #323232;
+}
+
+.button_logout{
+    color: #323232;
+}
+
+
+/* Buttons - Pflanzen Anmeldungsformular hinzufügen */
+.button_anmeldungsformular_hinzufuegen{
+    color: #323232;
+}
+
+/*Buttons - Pflanzen Profil (löschen und berabeiten)*/
+.button_bearbeiten{
+    color: #323232;
+}
+
+.button_loeschen{
+    color: #323232;
+}
+
+/* Buttons - Pflanzen defintiv löschen */
+.button_defintiv_loeschen{
+    color: #323232;
+}
+
+/* Buttons - Pflanzen sichern */
+.button_sichern{
+    color: #323232;
+}
 
 
