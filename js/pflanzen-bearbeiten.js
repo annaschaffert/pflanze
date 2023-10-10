@@ -35,12 +35,17 @@ async function editPlant(id, species, nickname, photo, planted) {
 
 // Event-Handler für das Formular
 registrationForm.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Verhindern Sie das Standardverhalten des Formulars (Seitenaktualisierung)
+e.preventDefault(); // Verhindern Sie das Standardverhalten des Formulars (Seitenaktualisierung)
 
-  const id = /* ID Ihrer ausgewählten Pflanze */;
-  const species = speciesInput.value;
+
+// von copilot erstellt, da immer felhermeldung gekommen ist
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
+const species = speciesInput.value;
   const nickname = nicknameInput.value;
-  const photo = photoInput.value; // Beachten Sie, dass Sie hier das Foto verarbeiten müssen
+  const photo = photoInput.value; 
+  // Beachten Sie, dass Sie hier das Foto verarbeiten müssen
   const planted = plantedInput.value;
 
   if (id) {
