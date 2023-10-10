@@ -1,1 +1,69 @@
+/*Typografie*/
+
+/*Hauptite - Plant Aid*/
+h1{
+    color: #323232;
+    text-align: center;
+    font-family: Knewave;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Titel - Anmelden, Registrieren, Meine Pflanzen, etc.*/
+h2{
+    color: #323232;
+    text-align: center;
+    font-family: Knewave;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Überschrfit - Name der Pflanze*/
+h3{
+    color: #323232;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/* kleinere Überschrift - Name/Alter, Merkmale, Galerie deiner Fortschritte*/
+h4{
+    color: #323232;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/*Pflanzenübsicht - kleiner Text bei Icons*/
+h5{
+    color: #323232;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; 
+}
+
+
+/* Fliesstext - Text unterhalb Titel*/
+p{
+    color: #323232;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
 
