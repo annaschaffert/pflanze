@@ -6,4 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>plant aid</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 </head>
+
+<body>
+    <div class="container">
+      <h2>Pflanzen Anmeldungsformular</h2>
+      <form id="registration-form-plants">
+        <div class="form-group">
+          <label for="nickname"></label>
+          <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
+        </div>
+        <div class="form-group">
+          <label for="species"></label>
+          <input type="text" id="species" name="species" placeholder="Pflanzenart" required>
+        </div>
+        <div class="form-group">
+          <label for="planted"></label>
+          <input type="date" id="planted" name="planted" placeholder="Eingepflanzt am:" required>
+        </div>
+        <div class="form-group">
+            <label for="location"></label>
+            <input type="text" id="location" name="location" placeholder="Standort" required>
+          </div>
+        <div class="form-group">
+            <label for="photo"></label>
+            <input type="file" id="photo" name="photo" placeholder="Foto" required>
+          </div>
+        <button type="submit">Pflanze hinzufügen</button>
+      </form>
+    </div>
+    
+
+
+    <input type="file" id="photoInput" />
+    <input type="text" id="captionInput" placeholder="Enter caption" />
+    <button id="uploadButton">Upload Photo</button>
+
+
+    <script type="module" src="/js/supabase.js"></script>
+    <script type="module" src="/js/pflanzen-hinzufuegen.js"></script>
+    <!-- <script type="module" src="solution_api.js"></script> -->
+
+
+  </body>
+</html>
