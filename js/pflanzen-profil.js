@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const detailPflanzenAnsicht = document.getElementById("detailPflanzenAnsicht");
     const deleteButton = document.querySelector(".button_loeschen");
     const editButton = document.querySelector(".button_bearbeiten");
+    
 
     // Get the plant ID from the URL
     const params = new URLSearchParams(window.location.search);
@@ -48,18 +49,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Species: ${selectedPlant.species}</p>
         <p>Planted: ${selectedPlant.planted}</p>
         <p>Location: ${selectedPlant.location}</p>
-        <p>Photo: ${selectedPlant.photo}</p>
     `;
 
     // Add event listeners to delete and edit buttons
-    deleteButton.addEventListener("click", () => {
-        // Implement your delete logic here
-        // You can use plantId to delete the specific plant.
-        // Example: send a DELETE request to your API.
-
-        // ab hier code von deletebutton
-
-          // Event listener for "Löschen" (Delete) button click
+   
     deleteButton.addEventListener("click", async function () {
         if (confirm("Are you sure you want to delete this plant?")) {
             // If the user confirms the deletion
@@ -74,22 +67,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-            // Redirect to a page or display a message to indicate success
-            alert("Plant deleted successfully.");
-            // Optionally, redirect to another page after deletion
-            window.location.href = "some-other-page.html";
+           // Optionally, redirect to another page after deletion
+           window.location.replace("pflanze-loeschen-bestaetigung.html");
+            
         }
     });
-});
 
-    editButton.addEventListener("click", () => {
-        // Implement your edit logic here
-        // You can navigate to an edit page or open a modal for editing.
-
-         // Event listener for "Edit" button click
-
-         //ab hier code von editbutton 
-         
     editButton.addEventListener("click", function () {
         const formFields = `
             <h2>Edit Plant Details</h2>
@@ -100,13 +83,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <input type="text" id="species" name="species" value="${selectedPlant.species}" required>
                 <label for="planted">Planted:</label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" value="${selectedPlant.location}" required>
-                <label for="photo">Foto:</label>
-                <input type="file" id="photo" name="phozo" value="${selectedPlant.photo}" required>
-                <button type="submit">Update</button>
+                <button type="submit">Speichern</button>
             </form>
         `;
+        editButton.style.display = "none";
 
         detailPflanzenAnsicht.innerHTML = formFields;
 
@@ -119,8 +99,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 nickname: editPlantForm.nickname.value,
                 species: editPlantForm.species.value,
                 planted: editPlantForm.planted.value,
-                location: editPlantForm.location.value,
-                photo: editPlantForm.photo.value,
+                
             };
 
             // Update the plant details in the database
@@ -134,9 +113,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-            // Display the updated plant details
-            displayPlantDetails();
+
+            //reload site
+            window.location.replace("pflanze-bearbeiten-bestaetigung.html");
         });
     });
+
 });
-});      
+
+         
