@@ -17,7 +17,6 @@ async function deletePlant() {
     } else {
       console.log('Pflanze wurde erfolgreich gelöscht:', data);
         result.innerHTML = "Pflanze wurde erfolgreich gelöscht";
-        
     }
   } catch (error) {
     console.error('Fehler beim Löschen der Pflanze:', error);
