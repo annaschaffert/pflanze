@@ -215,3 +215,78 @@ h2.registration{
     text-align: center;   
     padding-top: 250px;
 }
+
+
+/*Bearbeitungs-Seite*/
+.container-bearbeitung {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+.form-group-bearbeitung {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+button {
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: #589A8D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    background-color: #CEE6D8;
+    color: #323232;
+    
+}
+
+h1.registration{
+    color: #F5F5F5;
+    margin-block-start: 1em;
+    margin-block-end: 0em;
+}
+
+h2.registration{
+    color: #F5F5F5;
+    margin-block-start: 0em;
+    margin-block-end: 0.em;
+}
+
+#wrapper {
+    max-width: 400px;
+}
+
+#first {
+    width: 45%;
+    float: left;
+}
+
+#second {
+    width: 45%;
+    float: right;
+}
+
+
+
+
