@@ -95,10 +95,6 @@ p{
     color: #323232;
 }
 
-/*Buttons - Pflanzen Profil (löschen und berabeiten)*/
-.button_bearbeiten{
-    color: #323232;
-}
 
 .button_loeschen{
     color: #323232;
@@ -154,13 +150,11 @@ input[type="email"] {
     cursor: pointer;
     float: right;
     width: 100%;
-    
 }
 
 .button_registrierung:hover {
     background-color: #CEE6D8;
-    color: #323232;
-    
+    color: #323232; 
 }
 
 h1.registration{
@@ -189,10 +183,6 @@ h2.registration{
     float: right;
 }
 
-#third {
-    width: 100%
-    float: right;
-}
 
 
  
@@ -246,7 +236,7 @@ input[type="email"] {
     border-radius: 5px;
 }
   
-button {
+.button_bearbeiten {
     padding: 10px 20px;
     padding-right: 100px;
     background-color: #589A8D;
@@ -256,26 +246,12 @@ button {
     cursor: pointer;
     float: right;
 }
-
-button:hover {
+.button_bearbeiten:hover {
     background-color: #CEE6D8;
-    color: #323232;
-    
+    color: #323232; 
 }
 
-h1.registration{
-    color: #F5F5F5;
-    margin-block-start: 1em;
-    margin-block-end: 0em;
-}
-
-h2.registration{
-    color: #F5F5F5;
-    margin-block-start: 0em;
-    margin-block-end: 0.em;
-}
-
-#wrapper {
+#wrapper-bearbeitung {
     max-width: 400px;
 }
 
