@@ -2,7 +2,7 @@ import { supa } from "./supabase.js";
 
 
 // HTML-Elemente
-const registrationForm = document.getElementById('registration-form');
+const registrationForm = document.getElementById('bearbeitung-form');
 const speciesInput = document.getElementById('species');
 const nicknameInput = document.getElementById('nickname');
 const photoInput = document.getElementById('photo');
@@ -34,7 +34,7 @@ async function editPlant(id, species, nickname, photo, planted) {
 }
 
 // Event-Handler für das Formular
-registrationForm.addEventListener('submit', async (e) => {
+bearbeitungForm.addEventListener('submit', async (e) => {
 e.preventDefault(); // Verhindern Sie das Standardverhalten des Formulars (Seitenaktualisierung)
 
 
