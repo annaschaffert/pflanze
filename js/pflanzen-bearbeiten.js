@@ -2,7 +2,7 @@ import { supa } from "./supabase.js";
 
 
 // HTML-Elemente
-const registrationForm = document.getElementById('bearbeitung-form');
+const bearbeitungForm = document.getElementById('bearbeitung-form');
 const speciesInput = document.getElementById('species');
 const nicknameInput = document.getElementById('nickname');
 const photoInput = document.getElementById('photo');
