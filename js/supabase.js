@@ -9,4 +9,15 @@ const supa = supabase.createClient(supabaseUrl, supabaseKey, {
     },
 });
 
-export { supa }
+async function getSignedUrl(filePath) {
+    const { data, error } = await supa.storage.from('photos').createSignedUrl(filePath, 300);
+    if (error) {
+      console.error('Error generating signed URL:', error);
+      return null;
+    }
+    return data.signedURL;
+  }
+  
+
+
+export { supa, getSignedUrl }
