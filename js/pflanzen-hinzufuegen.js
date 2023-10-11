@@ -63,8 +63,13 @@ async function uploadPhoto() {
       }
 
       addPlantstoDatabase(nickname, species, planted, photo, user_id, location_id);
+      //redirect with replace
+      window.location.replace("pflanze-hinzufuegen-bestaetigung.html");
 }
+
 }
+
+
 
 
 uploadPhoto();
@@ -86,6 +91,8 @@ uploadPhoto();
       // Zurücksetzen des Formulars (optional)
       registrationForm.reset();
     });
+
+
   });
 
 
