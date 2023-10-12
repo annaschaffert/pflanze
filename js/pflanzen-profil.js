@@ -97,16 +97,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     editButton.addEventListener("click", function () {
         const formFields = `
-            <h2>Edit Plant Details</h2>
-            
+            <h2>Pflanze bearbeiten</h2>
+            <p>Hier kannst du die Eingschaften deiner Pflanze bearbeiten.</p>
+            <h4>Eigenschaften anpassen</h4>
             <form id="editPlantForm">
-                <label for="nickname">Nickname:</label>
+                <label for="nickname"> <p><b>Nickname:</b><p></label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
-                <label for="species">Species:</label>
+                <label for="species"><p><b>Species:</b><p></label>
                 <input type="text" id="species" name "species" value="${selectedPlant.species}" required>
-                <label for="planted">Planted:</label>
+                <label for="planted"><p><b>Planted:</b><p></label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
-                <button type="submit">Speichern</button>
+                <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
         `;
         editButton.style.display = "none";
