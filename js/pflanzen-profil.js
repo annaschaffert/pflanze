@@ -44,18 +44,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Display plant details
         detailPflanzenAnsicht.innerHTML = `
-        <h2 style="margin-bottom: 15px;">${selectedPlant.nickname}</h2>
+        <h2 style="margin-bottom: 15px;margin-top:40px;">${selectedPlant.nickname}</h2>
         <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
         <img src="${signedUrl}" alt="Plant Photo">
         <h4 id="merkmale">Merkmale</h4>
-        <p>Species: ${selectedPlant.species}</p>
-        <p>Planted: ${selectedPlant.planted}</p>
-        <p>Location: ${selectedPlant.location}</p>
+        <p id="merkmale_defintionen">Pflanzenart:  ${selectedPlant.species}</p>
+        <p id="merkmale_defintionen">Eingepflanzt:  ${selectedPlant.planted}</p>
+        <p id="merkmale_defintionen">Standort:  ${selectedPlant.location}</p>
     `;
 
     // Style the image
     const imgElement = detailPflanzenAnsicht.querySelector("img");
-    imgElement.style.maxWidth = "400px";
+    imgElement.style.width = "400px";
+    imgElement.style.height = "200px";
     imgElement.style.display = "block";
     imgElement.style.margin = "25px auto";
 
@@ -66,6 +67,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Style the vom h4 tag -> merkmale
     const merkmaleElement = detailPflanzenAnsicht.querySelector("#merkmale");
    
+    // Style the vom hp tag -> merkmale_defintionen
+    const merkmale_defintionenElement = detailPflanzenAnsicht.querySelector("#merkmale_defintionen");
 
     // Add event listeners to delete and edit buttons
     zurueckButton.addEventListener("click", function () {
