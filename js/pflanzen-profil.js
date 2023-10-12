@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const detailPflanzenAnsicht = document.getElementById("detailPflanzenAnsicht");
     const deleteButton = document.querySelector(".button_loeschen");
     const editButton = document.querySelector(".button_bearbeiten");
-    
+    const zurueckButton = document.querySelector(".button_zurueck_profil"); // Aktualisierte Zeile
 
     // Get the plant ID from the URL
     const params = new URLSearchParams(window.location.search);
@@ -53,13 +53,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Style the image
     const imgElement = detailPflanzenAnsicht.querySelector("img");
-    // Füge ein CSS-Styling hinzu
     imgElement.style.maxWidth = "400px";
-    imgElement.style.display = "block"; // Setzt das Bild auf 'block', um die horizontalen Eigenschaften anwenden zu können
-    imgElement.style.margin = "0 auto"; // Zentriert das Bild horizontal
+    imgElement.style.display = "block";
+    imgElement.style.margin = "0 auto";
 
     // Add event listeners to delete and edit buttons
-   
+    zurueckButton.addEventListener("click", function () {
+        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
+        window.location.href = "meine-pflanzen.html";
+    });
+
     deleteButton.addEventListener("click", async function () {
         if (confirm("Are you sure you want to delete this plant?")) {
             // If the user confirms the deletion
@@ -74,9 +77,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-           // Optionally, redirect to another page after deletion
-           window.location.replace("pflanze-loeschen-bestaetigung.html");
-            
+            // Optionally, redirect to another page after deletion
+            window.location.replace("pflanze-loeschen-bestaetigung.html");
         }
     });
 
@@ -87,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <label for="nickname">Nickname:</label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
                 <label for="species">Species:</label>
-                <input type="text" id="species" name="species" value="${selectedPlant.species}" required>
+                <input type="text" id="species" name "species" value="${selectedPlant.species}" required>
                 <label for="planted">Planted:</label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
                 <button type="submit">Speichern</button>
@@ -106,7 +108,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 nickname: editPlantForm.nickname.value,
                 species: editPlantForm.species.value,
                 planted: editPlantForm.planted.value,
-                
             };
 
             // Update the plant details in the database
@@ -120,12 +121,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-
             //reload site
             window.location.replace("pflanze-bearbeiten-bestaetigung.html");
         });
     });
-
 });
-
-         

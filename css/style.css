@@ -226,6 +226,8 @@ input[type="email"] {
     border-radius: 5px;
     cursor: pointer;
     float: right;   
+    margin-right: 600px;
+    margin-top: 50px;
 }
 
 .button_loeschen:hover{
@@ -242,12 +244,34 @@ input[type="email"] {
     border-radius: 5px;
     cursor: pointer;
     float: right;
+    margin-left: 200px;
+    margin-right: 100px;
+    margin-top: 50px;
 }
 
 .button_bearbeiten:hover{
     background-color: #589A8D; 
     color: #fff; 
 }
+
+.button_zurueck_profil{
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: #323232; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 100px;
+    margin-right: 10px;   
+}
+
+.button_zurueck_profil:hover {
+    background-color: #589A8D; 
+    color: #fff;
+}
+
 
 
 
