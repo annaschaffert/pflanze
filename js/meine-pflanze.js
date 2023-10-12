@@ -30,7 +30,7 @@ async function showPlants() {
             <p>Planted: ${plant.planted}</p>
             <p>Location: ${plant.location}</p>
             <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
-            <a class="mehr-link" href="pflanzen-profil.html?id=${plantId}">Mehr</a>
+            <a class="mehr-link" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
         `;
         cardContainer.appendChild(card);
     });
