@@ -35,7 +35,7 @@ async function showPlants() {
         cardContainer.appendChild(card);
     });
 
-    // Add event listeners to "Mehr" buttons
+    // Add event listeners to "Mehr" buttons -> den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht
     const mehrButtons = document.querySelectorAll('.mehr-button');
     mehrButtons.forEach(button => {
         button.addEventListener('click', showPlantDetails);
