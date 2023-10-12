@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plant aid</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<h2 style="color:red" id="rootCheck">Checking location...</h2>
+
+    <div>
+        <h2>Magic Link Authentication</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="sendMagicLinkButton">Send Magic Link</button>
+    </div>
+
+    <p id="userStatus">Checking authentication status...</p>
+
+    <button id="logoutButton">Logout</button>
+
+    <script type="module" src="../../00_setup/supabase.js"></script>
+    <script type="module" src="1_magiclink.js"></script>
+
+    <script>
+
+        // script prüft, ob wir uns auf der root des servers befinden
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const rootCheckElem = document.getElementById('rootCheck');
+    
+            if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+                rootCheckElem.textContent = "You are on the root of the server.";
+                rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
+            } else {
+                rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="/"> da </a>';
+            }
+        });
+    </script>
+
+ 
+
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+
+<script type="module" src="/js/supabase.js"></script>
+<script type="module" src="/js/magiclink.js"></script>
+</body>
+</html>
