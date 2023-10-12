@@ -222,15 +222,16 @@ input[type="email"] {
 
 .button_loeschen{
     padding: 10px 20px;
-    padding-right: 100px;
     background-color: #323232; 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;   
-    margin-right: 600px;
-    margin-top: 50px;
+    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
+    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
+    text-align: center;
+    margin-left:650px;
+    
 }
 
 .button_loeschen:hover{
@@ -240,16 +241,15 @@ input[type="email"] {
 
 .button_bearbeiten{
     padding: 10px 20px;
-    padding-right: 100px;
     background-color: #323232; 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;
-    margin-left: 200px;
-    margin-right: 100px;
-    margin-top: 50px;
+    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
+    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
+    text-align: center;
+    
 }
 
 .button_bearbeiten:hover{
@@ -265,9 +265,9 @@ input[type="email"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;
-    margin-top: 100px;
-    margin-right: 10px;   
+    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
+    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
+    text-align: center;
 }
 
 .button_zurueck_profil:hover {
