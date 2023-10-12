@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const vorname = document.getElementById("vorname").value;
       const nachname = document.getElementById("nachname").value;
       const email = document.getElementById("email").value;
+      const registrierungButton = document.querySelector(".button_registrierung"); // Aktualisierte Zeile
+
   
       // Hier können Sie die eingegebenen Daten weiterverarbeiten, z.B. an einen Server senden.
       
@@ -31,23 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
               }
           
               console.log('Benutzer wurde erfolgreich hinzugefügt:', data);
-              return true;
+              // Hier die Weiterleitung zur "meine-pflanzen" Seite
+              window.location.href = "meine-pflanzen.html";
+     
             } catch (error) {
               console.error('Fehler beim Hinzufügen des Benutzers:', error);
               return false;
             }
           }
-
-
       // Beispiel: Ausgabe der Daten in der Konsole
       console.log("Vorname: " + vorname);
       console.log("Nachname: " + nachname);
       console.log("E-Mail-Adresse: " + email);
 
-
+      // Hier ist die Verbindung mit dem Button für die Weiterleitung zur "meine-pflanzen" Seite
+      registrierungButton.addEventListener("click", function () {
+      
   
       // Zurücksetzen des Formulars (optional)
       registrationForm.reset();
+      });
     });
   });
-  
