@@ -281,7 +281,7 @@ input[type="email"] {
     height: auto;
     margin-top: 10px;
 }
-
+/*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
     padding-right: 100px;
