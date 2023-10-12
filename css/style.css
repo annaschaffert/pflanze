@@ -146,17 +146,19 @@ h2.registration{
 /*pflanze-löschen-bestätigung*/
 
 .button_zurueck{
-    color: #F5F5F5;
-    background-color: #323232;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin: 0 auto; 
-    display: block; 
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: #323232; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;    
 }
 
 .button_zurueck:hover {
-    color: #323232;
-    background-color: #CEE6D8;
+    background-color: #589A8D; 
+    color: #fff;
 }
 
 .container_erfolg {
@@ -210,7 +212,6 @@ input[type="email"] {
 #wrapper-bearbeitung {
     max-width: 400px;
 }
-
 
 
 
