@@ -62,7 +62,7 @@ p{
     color: #323232;
     text-align: center;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -218,63 +218,50 @@ input[type="email"] {
 
 
 
-/*Profil der Pflanze*/
+/*Pflanzen Profil Seite*/
 
+#merkmale{
+    margin-right: 320px;
+}
+
+.button_loeschen,
+.button_bearbeiten,
+.button_zurueck_profil {
+    padding: 10px 0;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+    margin: 10px; /* Abstand zwischen den Buttons */
+}
+
+.button_loeschen,
+.button_bearbeiten {
+    margin-right: 10px; /* Abstand zwischen den Buttons "Löschen" und "Bearbeiten" */
+    margin-top: 20px;
+}
 .button_loeschen{
-    padding: 10px 20px;
-    background-color: #323232; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
-    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
-    text-align: center;
-    margin-left:650px;
-    
+    margin-left: 360px;
 }
 
-.button_loeschen:hover{
-    background-color: #589A8D; 
-    color: #fff;
-}
-
-.button_bearbeiten{
-    padding: 10px 20px;
-    background-color: #323232; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
-    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
-    text-align: center;
-    
-}
-
-.button_bearbeiten:hover{
-    background-color: #589A8D; 
-    color: #fff; 
-}
-
-.button_zurueck_profil{
-    padding: 10px 20px;
-    padding-right: 100px;
-    background-color: #323232; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 200px; /* Setzen Sie die gewünschte Breite der Buttons */
-    height: 40px; /* Setzen Sie die gewünschte Höhe der Buttons */
-    text-align: center;
-}
-
+.button_loeschen:hover,
+.button_bearbeiten:hover,
 .button_zurueck_profil:hover {
-    background-color: #589A8D; 
+    background-color: #589A8D;
     color: #fff;
 }
 
+.button_zurueck_profil {
+    float: left; /* Zurück-Button auf die linke Seite verschieben */
+    clear: both; /* Verhindert, dass andere Elemente neben dem Zurück-Button schweben */
+    margin-top: 120px;
+    margin-left: 120px;
+}
 
 
 
