@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Location: ${selectedPlant.location}</p>
     `;
 
+    // Style the image
+    const imgElement = detailPflanzenAnsicht.querySelector("img");
+    // Füge ein CSS-Styling hinzu
+    imgElement.style.maxWidth = "400px";
+    imgElement.style.display = "block"; // Setzt das Bild auf 'block', um die horizontalen Eigenschaften anwenden zu können
+    imgElement.style.margin = "0 auto"; // Zentriert das Bild horizontal
+
     // Add event listeners to delete and edit buttons
    
     deleteButton.addEventListener("click", async function () {
