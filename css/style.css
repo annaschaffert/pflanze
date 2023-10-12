@@ -224,6 +224,20 @@ input[type="email"] {
     margin-right: 320px;
 }
 
+#merkmale_defintionen{
+    font-size: 14.5px;
+    font-weight: 200;
+    margin-left: 655px;
+    text-align: left;
+    padding: 10px 20px;
+    width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 20px;
+    border-radius: 4px;
+    background-color:#F5F5F5;
+    padding-left: 15px; /* Linker Abstand */
+
+}
+
 .button_loeschen,
 .button_bearbeiten,
 .button_zurueck_profil {
@@ -233,11 +247,12 @@ input[type="email"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 180px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 40px;
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
     margin: 10px; /* Abstand zwischen den Buttons */
+
 }
 
 .button_loeschen,
@@ -246,7 +261,7 @@ input[type="email"] {
     margin-top: 20px;
 }
 .button_loeschen{
-    margin-left: 360px;
+    margin-left: 335px;
 }
 
 .button_loeschen:hover,
