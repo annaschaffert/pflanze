@@ -269,8 +269,6 @@ float: right;
 
 CSS von Beni
 */
-
-
 /* Add your existing CSS styles here */
 
 .card-container {
@@ -301,4 +299,22 @@ CSS von Beni
     max-width: 100%;
     height: auto;
     margin-top: 10px;
+}
+
+/*Button - Meine Pflanze*/
+.button_meine_pflanzen{
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: #323232; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;  
+    text-decoration: none;
+}
+
+.button_meine_pflanzen:hover{
+    background-color: #589A8D; 
+    color: #fff;
 }
