@@ -278,6 +278,38 @@ input[type="email"] {
     margin-left: 120px;
 }
 
+/*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
+
+#editPlantForm{
+    width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 20px;
+    margin-left: 655px;
+}
+
+
+#speichern_knopf{
+    padding: 10px 0;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+ 
+}
+
+#speichern_knopf:hover{
+    background-color: #589A8D;
+    color: #fff;
+}
+
+#planted + #speichern_knopf {
+    display: block;
+    margin-top: 10px;
+}
 
 
 /*Seite Meine Pflanzen -  Home*/
