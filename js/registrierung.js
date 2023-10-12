@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const vorname = document.getElementById("vorname").value;
       const nachname = document.getElementById("nachname").value;
       const email = document.getElementById("email").value;
+      const registrierungButton = document.querySelector(".button_registrierung"); // Aktualisierte Zeile
+
   
       // Hier können Sie die eingegebenen Daten weiterverarbeiten, z.B. an einen Server senden.
       
@@ -48,6 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Zurücksetzen des Formulars (optional)
       registrationForm.reset();
+
+      // Verknüpfung des Buttons mit der nächsten Seite -> meine-pflanzen.html
+      registrierungButton.addEventListener("click", function () {
+        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
+        window.location.href = "meine-pflanzen.html";
     });
-  });
-  
+
+      });
+    });
