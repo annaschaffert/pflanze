@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     const signedUrl = await getSignedUrl(photoData[0].photo);
 
     // Display plant details
-    detailPflanzenAnsicht.innerHTML = `
-        <h2>${selectedPlant.nickname}</h2>
+        detailPflanzenAnsicht.innerHTML = `
+        <h2 style="margin-bottom: 15px;">${selectedPlant.nickname}</h2>
+        <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
         <img src="${signedUrl}" alt="Plant Photo">
+        <h4 id="merkmale">Merkmale</h4>
         <p>Species: ${selectedPlant.species}</p>
         <p>Planted: ${selectedPlant.planted}</p>
         <p>Location: ${selectedPlant.location}</p>
@@ -55,7 +57,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     const imgElement = detailPflanzenAnsicht.querySelector("img");
     imgElement.style.maxWidth = "400px";
     imgElement.style.display = "block";
-    imgElement.style.margin = "0 auto";
+    imgElement.style.margin = "25px auto";
+
+    // Style the vom P tag -> description
+    const descriptionElement = detailPflanzenAnsicht.querySelector("#description");
+    descriptionElement.style.margin = "10px 0";
+
+    // Style the vom h4 tag -> merkmale
+    const merkmaleElement = detailPflanzenAnsicht.querySelector("#merkmale");
+   
 
     // Add event listeners to delete and edit buttons
     zurueckButton.addEventListener("click", function () {
@@ -85,6 +95,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     editButton.addEventListener("click", function () {
         const formFields = `
             <h2>Edit Plant Details</h2>
+            
             <form id="editPlantForm">
                 <label for="nickname">Nickname:</label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
