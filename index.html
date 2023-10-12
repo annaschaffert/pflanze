@@ -11,37 +11,57 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <!-- HTML File auf der Root des Servers für Authentifizierung -->
 
-<!-- 
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
+<!-- START Magiclink Authentication -->
 
-    Kommentiere entweder den HTML-Block für die Password-Authentication resp. 
-    Magiclink-Authentication ein oder aus.
+    <div>
+        <h1>Plant Aid</h1>
+        <h2>Anmeldung</h2>
+        <input type="email" id="emailInput" placeholder="Tippe deine E-Mail hier ein" />
+        <button id="sendMagicLinkButton">Anmelden</button>
+        <button type="submit" class="button_neu_registrierung"><a href="login-registrieren.html"></a>Neu Registrieren</button>
+       
+    </div>
+
+    <!--Wann geht das weg? Wenn E-Mail erkannt?-->
+    <p id="userStatus">Checking authentication status...</p>
+    <button id="logoutButton" href="login-registrieren.html">Logout</button>
+    <!-- brauchen wir Logout?-->
+
+    <script type="module" src="js/supabase.js"></script>
+    <script type="module" src="js/magiclink.js"></script>
     
--->
+    <script>
+
+        // script prüft, ob wir uns auf der root des servers befinden
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const rootCheckElem = document.getElementById('rootCheck');
+    
+            if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+                rootCheckElem.textContent = "You are on the root of the server.";
+                rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
+            } else {
+                rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="/"> da </a>';
+            }
+        });
+    </script>
+ 
+
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
+<!-- ENDE Magiclink Authentication -->
 
 
 
-<body>
-<!-- Integration Supabase -->
-<script type="module" src="/js/supabase.js"></script>
-   
-
-<!-- START Integration Datenbank Test -->
-
-    <ul id="list">
-    </ul>
-    <table id="table"></table>
-
-<!-- ENDE Integration Datenbank Test -->
-
-
-
-<script type="module" src="js/supabase.js"></script>
-<script type="module" src="js/getData.js"></script>
 
 </body>
 
