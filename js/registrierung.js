@@ -33,29 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
               }
           
               console.log('Benutzer wurde erfolgreich hinzugefügt:', data);
-              return true;
+              // Hier die Weiterleitung zur "meine-pflanzen" Seite
+              window.location.href = "meine-pflanzen.html";
+     
             } catch (error) {
               console.error('Fehler beim Hinzufügen des Benutzers:', error);
               return false;
             }
           }
-
-
       // Beispiel: Ausgabe der Daten in der Konsole
       console.log("Vorname: " + vorname);
       console.log("Nachname: " + nachname);
       console.log("E-Mail-Adresse: " + email);
 
-
+      // Hier ist die Verbindung mit dem Button für die Weiterleitung zur "meine-pflanzen" Seite
+      registrierungButton.addEventListener("click", function () {
+      
   
       // Zurücksetzen des Formulars (optional)
       registrationForm.reset();
-
-      // Verknüpfung des Buttons mit der nächsten Seite -> meine-pflanzen.html
-      registrierungButton.addEventListener("click", function () {
-        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
-        window.location.href = "meine-pflanzen.html";
-    });
-
       });
     });
+  });
