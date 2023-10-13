@@ -311,20 +311,20 @@ input[type="email"] {
 }
 
 .plant-card {
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     padding: 10px;
     border-radius: 5px;
     width: 300px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 .plant-card h3 {
     font-size: 1.5rem;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 .plant-card p {
-    margin: 0;
+    margin-top: 10px;
 }
 
 .plant-card img {
@@ -332,6 +332,10 @@ input[type="email"] {
     height: auto;
     margin-top: 10px;
 }
+
+
+
+
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
