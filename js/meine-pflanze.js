@@ -26,9 +26,9 @@ async function showPlants() {
 
         card.innerHTML = `
             <h3>${plant.nickname}</h3>
-            <p>Species: ${plant.species}</p>
-            <p>Planted: ${plant.planted}</p>
-            <p>Location: ${plant.location}</p>
+            <p>Pflanzenart: ${plant.species}</p>
+            <p>Eingepflanzt: ${plant.planted}</p>
+            <p>Standort: ${plant.location}</p>
             <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
             <a class="mehr-link" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
         `;
