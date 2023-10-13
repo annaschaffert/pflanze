@@ -43,19 +43,32 @@ document.addEventListener("DOMContentLoaded", async function () {
     const signedUrl = await getSignedUrl(photoData[0].photo);
 
     // Display plant details
-    detailPflanzenAnsicht.innerHTML = `
-        <h2>${selectedPlant.nickname}</h2>
+        detailPflanzenAnsicht.innerHTML = `
+        <h2 style="margin-bottom: 15px;margin-top:40px;">${selectedPlant.nickname}</h2>
+        <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
         <img src="${signedUrl}" alt="Plant Photo">
-        <p>Species: ${selectedPlant.species}</p>
-        <p>Planted: ${selectedPlant.planted}</p>
-        <p>Location: ${selectedPlant.location}</p>
+        <h4 id="merkmale">Merkmale</h4>
+        <p id="merkmale_defintionen">Pflanzenart:  ${selectedPlant.species}</p>
+        <p id="merkmale_defintionen">Eingepflanzt:  ${selectedPlant.planted}</p>
+        <p id="merkmale_defintionen">Standort:  ${selectedPlant.location}</p>
     `;
 
     // Style the image
     const imgElement = detailPflanzenAnsicht.querySelector("img");
-    imgElement.style.maxWidth = "400px";
+    imgElement.style.width = "400px";
+    imgElement.style.height = "200px";
     imgElement.style.display = "block";
-    imgElement.style.margin = "0 auto";
+    imgElement.style.margin = "25px auto";
+
+    // Style the vom P tag -> description
+    const descriptionElement = detailPflanzenAnsicht.querySelector("#description");
+    descriptionElement.style.margin = "10px 0";
+
+    // Style the vom h4 tag -> merkmale
+    const merkmaleElement = detailPflanzenAnsicht.querySelector("#merkmale");
+   
+    // Style the vom hp tag -> merkmale_defintionen
+    const merkmale_defintionenElement = detailPflanzenAnsicht.querySelector("#merkmale_defintionen");
 
     // Add event listeners to delete and edit buttons
     zurueckButton.addEventListener("click", function () {
@@ -84,15 +97,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     editButton.addEventListener("click", function () {
         const formFields = `
-            <h2>Edit Plant Details</h2>
+            <h2>Pflanze bearbeiten</h2>
+            <p>Hier kannst du die Eingschaften deiner Pflanze bearbeiten.</p>
+            <h4>Eigenschaften anpassen</h4>
             <form id="editPlantForm">
-                <label for="nickname">Nickname:</label>
+                <label for="nickname"> <p><b>Nickname:</b><p></label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
-                <label for="species">Species:</label>
+                <label for="species"><p><b>Species:</b><p></label>
                 <input type="text" id="species" name "species" value="${selectedPlant.species}" required>
-                <label for="planted">Planted:</label>
+                <label for="planted"><p><b>Planted:</b><p></label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
-                <button type="submit">Speichern</button>
+                <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
         `;
         editButton.style.display = "none";
