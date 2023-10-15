@@ -28,16 +28,17 @@
     <div>
         <h1>Plant Aid</h1>
         <h2>Anmeldung</h2>
-        <input type="email" id="emailInput" placeholder="Tippe deine E-Mail hier ein" />
+        <div class="container_login">
+        <input type="email_login" id="email" placeholder="E-Mail" />
         <button id="sendMagicLinkButton">Anmelden</button>
         <button type="submit" class="button_neu_registrierung"><a href="login-registrieren.html"></a>Neu Registrieren</button>
-       
+        </div>
     </div>
 
     <!--Wann geht das weg? Wenn E-Mail erkannt?-->
     <p id="userStatus">Checking authentication status...</p>
-    <button id="logoutButton" href="login-registrieren.html">Logout</button>
-    <!-- brauchen wir Logout?-->
+    <!--- <button id="logoutButton" href="login-registrieren.html">Logout</button>--->
+    
 
     <script type="module" src="js/supabase.js"></script>
     <script type="module" src="js/magiclink.js"></script>
