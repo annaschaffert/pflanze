@@ -512,15 +512,19 @@ button#button_loeschen{
 
 
 .button_pflanze_hinzufuegen{
-    padding: 10px 20px;
-    padding-right: 100px;
-    background-color: #323232; 
-    color: #ffffff;
+    padding: 10px 0;
+    background-color: #323232;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;  
-    text-decoration: none;
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: block; /* In einer horizontalen Linie anzeigen */
+    margin-left: 760px;
+    margin-top: 50px;
+
 }
 
 .button_pflanze_hinzufuegen:hover{
