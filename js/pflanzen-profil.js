@@ -94,8 +94,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             window.location.replace("pflanze-loeschen-bestaetigung.html");
         }
     });
-
+   
     editButton.addEventListener("click", function () {
+
+    // Ändere die Hintergrundfarbe des Formulars
+    
         const formFields = `
             <h2>Pflanze bearbeiten</h2>
             <p>Hier kannst du die Eingschaften deiner Pflanze bearbeiten.</p>
@@ -110,7 +113,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
         `;
+    
         editButton.style.display = "none";
+       
 
         detailPflanzenAnsicht.innerHTML = formFields;
 
