@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
                 <label for="species"><p style="margin-right: 310px;"><b>Species:</b><p></label>
                 <input type="text" id="species" name "species" value="${selectedPlant.species}" required>
-                <label for="planted"><p style="margin-right: 310px;">Planted:</b><p></label>
+                <label for="planted"><p style="margin-right: 310px;"><b>Planted:</b><p></label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
                 <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
