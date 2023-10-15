@@ -182,34 +182,37 @@ h2.registration{
 
 
 
-/*pflanze-bearbeiten*/
+
 
 
  
 
-/*pflanze-löschen-bestätigung*/
+/*pflanze-hinzufügen-bestätigung*/
 
-.button_zurueck{
-    padding: 10px 20px;
-    padding-right: 100px;
-    background-color: #323232; 
+#pflanze-hinzugefuegt-bestaetigung-titel{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.button_hinzufuegen_bestaetigung{
+    padding: 10px 0;
+    background-color: #323232;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;    
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: block; /* In einer horizontalen Linie anzeigen */
+    margin-left: 760px;
+    margin-top: 200px;
 }
 
-.button_zurueck:hover {
-    background-color: #589A8D; 
+.button_hinzufuegen_bestaetigung:hover{
+    background-color: #589A8D;
     color: #fff;
 }
-
-.container_erfolg {
-    text-align: center;   
-    padding-top: 250px;
-}
-
 
 /*Bearbeitungs-Seite*/
 .container-bearbeitung {
@@ -292,7 +295,6 @@ input[type="email"] {
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
     margin: 10px; /* Abstand zwischen den Buttons */
-
 }
 
 .button_loeschen,
@@ -367,17 +369,18 @@ input#planted{
 }
 
 button#speichern_knopf{
-    padding: 10px 20px;
-    padding-right: 100px;
+    padding: 10px 0;
     background-color: #323232;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;
-    margin-top: 100px;
-    margin-left: 120px;
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
     text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+    margin-right: 200px;
+    margin-top: 50px;
 }
 
 button#speichern_knopf:hover{
@@ -385,10 +388,40 @@ button#speichern_knopf:hover{
     color: #fff;    
 }
 
-#planted + #speichern_knopf {
-    display: block;
-    margin-top: 10px;
+button#button_loeschen{
+    margin-right: 200px;
 }
+
+
+/*Seite Bestätigung Pflanze bearbeiten*/
+.button_meine_pflanzen{
+    padding: 10px 0;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 190px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: block; /* In einer horizontalen Linie anzeigen */
+    margin-left: 760px;
+}
+
+.button_meine_pflanzen:hover{
+    background-color: #589A8D; 
+    color: #fff;
+}
+
+#pflanze-bearbeitet-bestaetigung-titel{
+    margin-top: 200px;
+    text-align: center;
+}
+
+/*Seite Löschen Bestätigung*/
+
+
+
 
 
 /*Seite Meine Pflanzen -  Home*/
@@ -454,22 +487,6 @@ button#speichern_knopf:hover{
         color: #323232; 
     }
 
-.button_meine_pflanzen{
-    padding: 10px 20px;
-    padding-right: 100px;
-    background-color: #323232; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    float: right;  
-    text-decoration: none;
-}
-
-.button_meine_pflanzen:hover{
-    background-color: #589A8D; 
-    color: #fff;
-}
 
 .button_pflanze_hinzufuegen{
     padding: 10px 20px;
