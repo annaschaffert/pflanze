@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>plant aid</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +15,12 @@
 </head>
 
 <body>
-    <div class="container_erfolg">
-        <h2>Pflanze wurde erfolgreich gelöscht</h2>
+   
+    <h2 id="pflanze-loeschen-bestaetigung-titel">Pflanze wurde <br>erfolgreich gelöscht </br></h2>
+    <button type="submit" class="button_pflanze_loeschen_bestaetigung">Meine Pflanzen</button>
 
-        <button type="button" class="button_meine_pflanzen"><a href="meine-pflanzen.html"> Meine Pflanzen</button>
-
-    </div>
-
-    
-
-    
+    <script type="module" src="js/supabase.js"></script>
+    <script type="module" src="js/pflanzen-loeschen-bestaetigung.js"></script>
 
 </body>
+</html>
