@@ -169,6 +169,8 @@ h2.registration{
 }
 
 
+
+
 /*meine-pflanze*/
 .plant-card p {
     text-align: left;
@@ -315,7 +317,7 @@ input[type="email"] {
 
 /*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
 
-form{
+form#editPlantForm {
     font-size: 14.5px;
     font-weight: 200;
     margin-left: 655px;
@@ -323,17 +325,59 @@ form{
     padding: 10px 20px;
     width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 20px;
-    border-radius: 4px;
-    background-color:#F5F5F5;
     padding-left: 15px; /* Linker Abstand */
+
 }
 
-#nickname{
+input#nickname{
+    background-color: #F5F5F5;
+    color: #323232;
     text-align: left;
-    margin-right: 500px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
-#speichern_knopf:hover{
+input#species{
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+input#planted{
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-right: 300px;
+}
+
+button#speichern_knopf{
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 100px;
+    margin-left: 120px;
+    text-align: center;
+}
+
+button#speichern_knopf:hover{
     background-color: #589A8D;
     color: #fff;    
 }
@@ -342,6 +386,7 @@ form{
     display: block;
     margin-top: 10px;
 }
+
 
 
 /*Seite Meine Pfla nzen -  Home*/
