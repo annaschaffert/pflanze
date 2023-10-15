@@ -70,7 +70,35 @@ p{
 
 /* LogIn-Seite*/
 
+/* Zentriert die gesamte Box vertikal und horizontal */
+.container_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Vertikale Zentrierung */
+}
 
+/* Stil für das E-Mail-Eingabefeld */
+#email {
+  width: 300px; /* Ändere die Breite nach Bedarf */
+}
+
+/* Stil für den "Anmelden" Button */
+#sendMagicLinkButton {
+  background-color:#589A8D;
+  width: 300px; /* Ändere die Breite nach Bedarf */
+  margin-top: 10px; /* Abstand nach oben */
+}
+
+/* Stil für den "Neu Registrieren" Button */
+.button_neu_registrierung {
+  background-color: darkgray;
+  width: 300px; /* Ändere die Breite nach Bedarf */
+  margin-top: 10px; /* Abstand nach oben */
+}
+
+  
 
 
 /*Registrierungs-Seite*/
