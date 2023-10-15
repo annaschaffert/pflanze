@@ -243,7 +243,6 @@ input[type="email"] {
     border-radius: 4px;
     background-color:#F5F5F5;
     padding-left: 15px; /* Linker Abstand */
-
 }
 
 .button_loeschen,
@@ -288,11 +287,27 @@ input[type="email"] {
 
 /*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
 
+form{
+    font-size: 14.5px;
+    font-weight: 200;
+    margin-left: 655px;
+    text-align: left;
+    padding: 10px 20px;
+    width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 20px;
+    border-radius: 4px;
+    background-color:#F5F5F5;
+    padding-left: 15px; /* Linker Abstand */
+}
 
+#nickname{
+    text-align: left;
+    margin-right: 500px;
+}
 
 #speichern_knopf:hover{
     background-color: #589A8D;
-    color: #fff;
+    color: #fff;    
 }
 
 #planted + #speichern_knopf {
@@ -301,7 +316,7 @@ input[type="email"] {
 }
 
 
-/*Seite Meine Pflanzen -  Home*/
+/*Seite Meine Pfla nzen -  Home*/
 
 .card-container {
     display: flex;
