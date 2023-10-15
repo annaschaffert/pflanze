@@ -44,4 +44,15 @@ async function showPlants() {
 
 // Rest of the code, including showPlantDetails, remains the same
 
+//Button Pflanze hinzufpügen
+document.addEventListener("DOMContentLoaded", async function () {
+    const buttonHinzufuegen = document.querySelector(".button_pflanze_hinzufuegen"); // Aktualisierte Zeile
+
+    buttonHinzufuegen.addEventListener("click", function () {
+        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
+        window.location.href = "pflanze-hinzufuegen.html";
+    });
+});
+
+
 showPlants();
