@@ -104,11 +104,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             <p>Hier kannst du die Eingschaften deiner Pflanze bearbeiten.</p>
             <h4>Eigenschaften anpassen</h4>
             <form id="editPlantForm">
-                <label for="nickname"> <p><b>Nickname:</b><p></label>
+                <label for="nickname"> <p style="margin-right: 295px;"><b>Nickname:</b><p></label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
-                <label for="species"><p><b>Species:</b><p></label>
+                <label for="species"><p style="margin-right: 310px;"><b>Species:</b><p></label>
                 <input type="text" id="species" name "species" value="${selectedPlant.species}" required>
-                <label for="planted"><p><b>Planted:</b><p></label>
+                <label for="planted"><p style="margin-right: 310px;">Planted:</b><p></label>
                 <input type="date" id="planted" name="planted" value="${selectedPlant.planted}" required>
                 <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
@@ -116,8 +116,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     
         editButton.style.display = "none";
        
+       
 
         detailPflanzenAnsicht.innerHTML = formFields;
+        
 
         // Add event listener to the form for updating the plant details
         const editPlantForm = document.getElementById("editPlantForm");
