@@ -169,11 +169,6 @@ h2.registration{
 }
 
 
-/*meine-pflanze*/
-.plant-card p {
-    text-align: left;
-}
-
 
 
 
@@ -344,7 +339,7 @@ form{
 }
 
 
-/*Seite Meine Pfla nzen -  Home*/
+/*Seite Meine Pflanzen -  Home*/
 
 .card-container {
     display: flex;
@@ -368,12 +363,23 @@ form{
 
 .plant-card p {
     margin-top: 10px;
+    text-align: left;
 }
 
 .plant-card img {
     max-width: 100%;
     height: auto;
     margin-top: 10px;
+}
+
+#merkmale_pflanzen {
+    font-size: 14.5px;
+    font-weight: 200;
+    border-radius: 4px;
+    background-color:#F5F5F5;
+    padding: 10px 20px;
+    width: 260px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 20px;
 }
 
 
@@ -417,7 +423,7 @@ form{
     padding: 10px 20px;
     padding-right: 100px;
     background-color: #323232; 
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
