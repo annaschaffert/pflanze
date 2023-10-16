@@ -590,6 +590,8 @@ button#button_loeschen{
 
 
 
+
+
 /*Seite Meine Pflanzen -  Home*/
 
 .card-container {
@@ -638,8 +640,6 @@ button#button_loeschen{
 }
 
 
-
-
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
@@ -654,11 +654,12 @@ button#button_loeschen{
     width: 180px;
     font-family: Roboto;
     text-decoration: none;
+    text-align: center;
     }
     
     .button_mehr:hover {
-        background-color: #589A8D;
-        color: #323232; 
+        background-color: #323232;;
+        color: #F5F5F5;
     }
 
 
