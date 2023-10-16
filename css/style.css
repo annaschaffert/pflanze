@@ -167,7 +167,7 @@ h2.registration{
     width: 45%;
     float: right;
 }
- 
+
 
 /*pflanze-hinzufügen-bestätigung*/
 
@@ -277,6 +277,7 @@ input[type="email"] {
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
     margin: 10px; /* Abstand zwischen den Buttons */
+    
 }
 
 .button_loeschen,
