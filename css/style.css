@@ -1,15 +1,14 @@
 /*Typografie*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap'); 
-<<<<<<< HEAD
 
 body{
     margin: 0;
     padding: 0;
 }
-=======
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
->>>>>>> 6b6821149bbddeb6ea027ae3f6dbd9540da336c1
+
 
 /*Hauptite - Plant Aid*/
 h1{
@@ -247,7 +246,7 @@ h2.registration{
 }
 
 
-<<<<<<< HEAD
+
 
 /*pflanze-hinzufügen*/
 
@@ -328,32 +327,6 @@ input#location{
     color: white;
 }
 
-
-
-
-<<<<<<< HEAD
-
-
-/*meine-pflanze*/
-.plant-card p {
-    text-align: left;
-}
-
-=======
->>>>>>> c9427a02a76ecc7424f149b501de1dc530ad103a
-
-
-
-
-
-
-
-
-
- 
-
-=======
->>>>>>> 121928b2f0a41fa2fcf54a507b1f469b6793d19f
 /*pflanze-hinzufügen-bestätigung*/
 
 #pflanze-hinzugefuegt-bestaetigung-titel{
