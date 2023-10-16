@@ -14,6 +14,7 @@ async function showPlants() {
         card.classList.add('plant-card');
         const plantId = plant.id; // Store the plant ID for later use
 
+
         // Fetch the signed URL for the plant's photo
         const { data: photoData, error: photoError } = await supa.from('Plant').select('photo').eq('id', plantId);
 
@@ -34,6 +35,9 @@ async function showPlants() {
         `;
         cardContainer.appendChild(card);
     });
+
+
+    
 
     // Add event listeners to "Mehr" buttons -> den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht
     const mehrButtons = document.querySelectorAll('.button_mehr');

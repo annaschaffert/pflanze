@@ -1,10 +1,15 @@
 /*Typografie*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap'); 
+<<<<<<< HEAD
 
 body{
     margin: 0;
     padding: 0;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+>>>>>>> 6b6821149bbddeb6ea027ae3f6dbd9540da336c1
 
 /*Hauptite - Plant Aid*/
 h1{
@@ -242,6 +247,113 @@ h2.registration{
 }
 
 
+<<<<<<< HEAD
+
+/*pflanze-hinzufügen*/
+
+.button_hinzufuegen {
+    padding: 10px 20px;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+}
+
+.button_hinzufuegen:hover {
+    background-color: #589A8D;
+    color: #fff; 
+}
+
+input#location{
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.dropdown_button {
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-style: normal;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: Roboto;
+    line-height: normal;
+}
+
+
+.dropdown_location {
+    height: 400px;
+    padding: 10px;
+}
+
+.courses {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.courses li {
+    color: #323232;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    background-color: #ccc;
+    font-family: Roboto;
+    border: 1px solid white;
+}
+
+.courses li a {
+    text-decoration: none;
+    color: #323232;
+    display: block;
+    padding: 10px;
+}
+
+.courses li:hover {
+    background-color: #589A8D;
+    color: white;
+}
+
+
+
+
+<<<<<<< HEAD
+
+
+/*meine-pflanze*/
+.plant-card p {
+    text-align: left;
+}
+
+=======
+>>>>>>> c9427a02a76ecc7424f149b501de1dc530ad103a
+
+
+
+
+
+
+
+
+
+ 
+
+=======
+>>>>>>> 121928b2f0a41fa2fcf54a507b1f469b6793d19f
 /*pflanze-hinzufügen-bestätigung*/
 
 #pflanze-hinzugefuegt-bestaetigung-titel{
@@ -401,6 +513,8 @@ input#nickname{
     line-height: normal;
 }
 
+
+
 input#species{
     background-color: #F5F5F5;
     color: #323232;
@@ -522,11 +636,13 @@ button#button_loeschen{
 
 .plant-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-family: Roboto;
+    margin-bottom: 30px;
 }
 
 .plant-card p {
     margin-top: 10px;
+    font-family: Roboto;
     text-align: left;
 }
 
@@ -539,9 +655,11 @@ button#button_loeschen{
 
 #merkmale_pflanzen {
     font-size: 14.5px;
+    font-family: Roboto;
     font-weight: 200;
     border-radius: 4px;
     padding: 10px 20px;
+    margin-top: -10px;
     width: 260px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 20px;
 }
@@ -553,12 +671,16 @@ button#button_loeschen{
 .button_mehr {
     padding: 10px 20px;
     padding-right: 100px;
+    margin-top: 10px;
     background-color: #F5F5F5;
     color: #323232;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     float: right;
+    width: 180px;
+    font-family: Roboto;
+    text-decoration: none;
     }
     
     .button_mehr:hover {

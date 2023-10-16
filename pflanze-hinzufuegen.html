@@ -12,13 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
       <h2>Pflanzen hinzufügen</h2>
       <form id="registration-form-plants">
-        <div class="form-group">
+        <div class="form-group" id="first">
           <label for="nickname"></label>
           <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
         </div>
@@ -26,11 +30,11 @@
           <label for="species"></label>
           <input type="text" id="species" name="species" placeholder="Pflanzenart" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="first">
           <label for="planted"></label>
-          <input type="date" id="planted" name="planted" placeholder="Eingepflanzt am:" required>
+          <input type="text" id="planted" name="planted" placeholder="Eingepflanzt am" onfocus="this.type='date'" onblur="this.type='text'" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="second">
             <label for="location"></label>
             <input type="text" id="location" name="location" placeholder="Standort" required>
           </div>
@@ -38,10 +42,52 @@
             <label for="photo"></label>
             <input type="file" id="photo" name="photo" placeholder="Foto" required>
           </div>
-        <button type="submit">Pflanze hinzufügen</button>
+        <button type="submit" class="button_hinzufuegen">Pflanze hinzufügen</button>
       </form>
     </div>
-    
+
+
+
+   
+    </div>
+    <div class="dropdown_location">
+      <div class="dropdown_list">
+          <button class="dropdown_button"
+              onclick="show_list()">
+              Standort
+          </button>
+
+          <div id="courses_id" class="courses">
+              <li><a href="">Abstellraum</a></li>
+              <li><a href="">Badezimmer</a></li>
+              <li><a href="">Balkon</a></li>
+              <li><a href="">Büro</a></li>
+              <li><a href="">Flur</a></li>
+              <li><a href="">Kinderzimmer</a></li>
+              <li><a href="">Küche</a></li>
+              <li><a href="">Schlafzimmer</a></li>
+              <li><a href="">Sonstige</a></li>
+          </div>
+      </div>
+    </div>
+
+  <script>
+    function show_list() {
+        var courses = document.getElementById("courses_id");
+
+        if (courses.style.display == "block") {
+            courses.style.display = "none";
+        } else {
+            courses.style.display = "block";
+        }
+    }
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropdown_button')) {
+            document.getElementById('courses_id')
+                .style.display = "none";
+        }
+    }    
+</script>
 
     <script type="module" src="/js/supabase.js"></script>
     <script type="module" src="/js/pflanzen-hinzufuegen.js"></script>
