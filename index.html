@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
 <!--hier kommt das Hintergrund Bild hin-->
 
@@ -24,17 +25,16 @@
 <!-- START Magiclink Authentication -->
 <!-- START Magiclink Authentication -->
 <!-- START Magiclink Authentication -->
-
+<div id="Hintergrundbild">
     <div>
-        <h1>Plant Aid</h1>
-        <h2>Anmeldung</h2>
+        <h1 id="Titel_Anmedlung">Plant Aid</h1>
+        <h2 id="Untertitel_Anmedlung">Anmeldung</h2>
         <div class="container_login">
         <input type="email_login" id="email" placeholder="E-Mail" />
         <button id="sendMagicLinkButton">Anmelden</button>
-        <button type="submit" class="button_neu_registrierung"><a href="login-registrieren.html"></a>Neu Registrieren</button>
+        <button type="submit" class="button_neu_registrierung">Neu registrieren</button>
         </div>
     </div>
-
     <!--Wann geht das weg? Wenn E-Mail erkannt?-->
     <p id="userStatus">Checking authentication status...</p>
     <!--- <button id="logoutButton" href="login-registrieren.html">Logout</button>--->
@@ -50,26 +50,30 @@
         window.addEventListener('DOMContentLoaded', (event) => {
             const rootCheckElem = document.getElementById('rootCheck');
     
-            if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+            if (window.location.pathname === "/" || window.location.pathname === "index.html") {
                 rootCheckElem.textContent = "You are on the root of the server.";
                 rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
             } else {
                 rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="/"> da </a>';
             }
         });
+
+        //Verlinkung zur Registrierungsseite
+        document.addEventListener("DOMContentLoaded", async function () {
+        const buttonNeuRegistrieren = document.querySelector(".button_neu_registrierung"); 
+
+        buttonNeuRegistrieren.addEventListener("click", function () {
+        // Hier setzen Sie die URL, zur Regisirierungsseite ein
+        window.location.href = "login-registrieren.html";
+         });
+    });
     </script>
- 
-
 <!-- ENDE Magiclink Authentication -->
 <!-- ENDE Magiclink Authentication -->
 <!-- ENDE Magiclink Authentication -->
 <!-- ENDE Magiclink Authentication -->
-
+</div>
 </body>
-
-
-</body>
-
 </html>
 
 
