@@ -1,5 +1,7 @@
 import { supa } from "/js/supabase.js";
 
+
+
 console.log(window.location.origin);
 
 // Funktion, um Magic Link zu senden
@@ -56,4 +58,5 @@ async function logout() {
   }
 }
 
-document.getElementById('logoutButton').addEventListener('click', logout);
+
+
