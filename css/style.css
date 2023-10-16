@@ -643,6 +643,7 @@ button#button_loeschen{
 .button_mehr {
     padding: 10px 20px;
     padding-right: 100px;
+    margin-top: 10px;
     background-color: #F5F5F5;
     color: #323232;
     border: none;
@@ -650,6 +651,8 @@ button#button_loeschen{
     cursor: pointer;
     float: right;
     width: 180px;
+    font-family: Roboto;
+    text-decoration: none;
     }
     
     .button_mehr:hover {
