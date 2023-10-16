@@ -30,13 +30,13 @@ async function showPlants() {
             <p id="merkmale_pflanzen">Eingepflanzt: ${plant.planted}</p>
             <p id="merkmale_pflanzen">Standort: ${plant.location}</p>
             <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
-            <a class="mehr-link" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
+            <a class="button_mehr" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
         `;
         cardContainer.appendChild(card);
     });
 
     // Add event listeners to "Mehr" buttons -> den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht
-    const mehrButtons = document.querySelectorAll('.mehr-button');
+    const mehrButtons = document.querySelectorAll('.button_mehr');
     mehrButtons.forEach(button => {
         button.addEventListener('click', showPlantDetails);
     });
