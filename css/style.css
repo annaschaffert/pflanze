@@ -608,11 +608,13 @@ button#button_loeschen{
 
 .plant-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-family: Roboto;
+    margin-bottom: 30px;
 }
 
 .plant-card p {
     margin-top: 10px;
+    font-family: Roboto;
     text-align: left;
 }
 
@@ -625,9 +627,11 @@ button#button_loeschen{
 
 #merkmale_pflanzen {
     font-size: 14.5px;
+    font-family: Roboto;
     font-weight: 200;
     border-radius: 4px;
     padding: 10px 20px;
+    margin-top: -10px;
     width: 260px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 20px;
 }
@@ -645,6 +649,7 @@ button#button_loeschen{
     border-radius: 5px;
     cursor: pointer;
     float: right;
+    width: 180px;
     }
     
     .button_mehr:hover {
