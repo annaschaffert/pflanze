@@ -219,18 +219,6 @@ h2.registration{
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c9427a02a76ecc7424f149b501de1dc530ad103a
-
-
-
-
-
-
- 
-
 /*pflanze-hinzufügen-bestätigung*/
 
 #pflanze-hinzugefuegt-bestaetigung-titel{
@@ -523,13 +511,13 @@ button#button_loeschen{
     max-width: 100%;
     height: auto;
     margin-top: 10px;
+    margin-right: 10px; 
 }
 
 #merkmale_pflanzen {
     font-size: 14.5px;
     font-weight: 200;
     border-radius: 4px;
-    background-color:#F5F5F5;
     padding: 10px 20px;
     width: 260px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 20px;
@@ -542,8 +530,8 @@ button#button_loeschen{
 .button_mehr {
     padding: 10px 20px;
     padding-right: 100px;
-    background-color: #589A8D;
-    color: #fff;
+    background-color: #F5F5F5;
+    color: #323232;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -551,7 +539,7 @@ button#button_loeschen{
     }
     
     .button_mehr:hover {
-        background-color: #CEE6D8;
+        background-color: #589A8D;
         color: #323232; 
     }
 
@@ -567,7 +555,7 @@ button#button_loeschen{
     height: 40px;
     text-align: center;
     display: block; /* In einer horizontalen Linie anzeigen */
-    margin-left: 760px;
+    margin: 0 auto;
     margin-top: 50px;
 
 }
@@ -577,3 +565,22 @@ button#button_loeschen{
     color: #fff;
 }
 
+.button_logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 0;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+}
+
+.button_logout:hover{
+    background-color: #589A8D; 
+    color: #fff;
+}
