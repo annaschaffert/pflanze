@@ -169,6 +169,89 @@ h2.registration{
 }
 
 
+
+/*pflanze-hinzufügen*/
+
+.button_hinzufuegen {
+    padding: 10px 20px;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+}
+
+.button_hinzufuegen:hover {
+    background-color: #589A8D;
+    color: #fff; 
+}
+
+input#location{
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.dropdown_button {
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-style: normal;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: Roboto;
+    line-height: normal;
+}
+
+
+.dropdown_location {
+    height: 400px;
+    padding: 10px;
+}
+
+.courses {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.courses li {
+    color: #323232;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    background-color: #ccc;
+    font-family: Roboto;
+    border: 1px solid white;
+}
+
+.courses li a {
+    text-decoration: none;
+    color: #323232;
+    display: block;
+    padding: 10px;
+}
+
+.courses li:hover {
+    background-color: #589A8D;
+    color: white;
+}
+
+
+
+
 <<<<<<< HEAD
 
 
@@ -179,6 +262,9 @@ h2.registration{
 
 =======
 >>>>>>> c9427a02a76ecc7424f149b501de1dc530ad103a
+
+
+
 
 
 
@@ -344,6 +430,8 @@ input#nickname{
     font-weight: 300;
     line-height: normal;
 }
+
+
 
 input#species{
     background-color: #F5F5F5;

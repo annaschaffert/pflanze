@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Hier können Sie die eingegebenen Daten weiterverarbeiten, z.B. an einen Server senden.
       
+      
+      
       // hinzufügen der daten mit supa
         
 
