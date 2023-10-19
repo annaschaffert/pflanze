@@ -266,7 +266,8 @@ h2.registration{
     color: #fff; 
 }
 
-input#location{
+
+#nickname-hinzuefuegen{
     background-color: #F5F5F5;
     color: #323232;
     text-align: left;
@@ -275,33 +276,69 @@ input#location{
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    width: 375px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 18px;
 }
 
-.dropdown_button {
+#species-hinzuefuegen{
     background-color: #F5F5F5;
     color: #323232;
     text-align: left;
-    font-style: normal;
+    font-family: Roboto;
     font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 375px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 18px;
+}
+
+input#planted-hinzuefuegen{
+    background-color: #F5F5F5;
+        color: #323232;
+        text-align: left;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        width: 175px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+        height: 18px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 10px;
+        margin-right: 200px;
+}
+
+#location-hinzuefuegen{
+    background-color: #F5F5F5;
+    color: #323232;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 178px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: 300;
-    font-family: Roboto;
-    line-height: normal;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right:10px;
 }
 
 
-.dropdown_location {
-    height: 400px;
-    padding: 10px;
-}
+
+
 
 .courses {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+   
 }
 
 .courses li {
