@@ -22,13 +22,26 @@
     <h2>Meine Pflanzen</h2>
     <div id="card-container" class="card-container">
     </div>
-    <button type="submit" class="button_logout">Logout</button>
+    <button type="submit" class="button_logout" href="index.html">Logout</button>
     <button type="submit" class="button_pflanze_hinzufuegen">Pflanze hinzufügen</button>
 
     <script type="module" src="/js/supabase.js"></script>
     <script type="module" src="/js/meine-pflanze.js"></script>
     <!-- <script type="module" src="solution_api.js"></script> -->
     
+<script>
+    //Verlinkung zur LoginSeite
+    document.addEventListener("DOMContentLoaded", async function () {
+    const buttonLogout = document.querySelector(".button_logout"); 
+
+    buttonLogout.addEventListener("click", function () {
+    // Hier setzen Sie die URL, zur LoginSeite ein
+    window.location.href = "index.html";
+     });
+     });
+    
+
+</script>
 </body>
 
 </html>

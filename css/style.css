@@ -638,7 +638,6 @@ button#button_loeschen{
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
-    padding-right: 100px;
     margin-top: 10px;
     background-color: #F5F5F5;
     color: #323232;
@@ -646,7 +645,7 @@ button#button_loeschen{
     border-radius: 5px;
     cursor: pointer;
     float: right;
-    width: 180px;
+    width: 260px;
     font-family: Roboto;
     text-decoration: none;
     text-align: center;
@@ -671,6 +670,7 @@ button#button_loeschen{
     display: block; /* In einer horizontalen Linie anzeigen */
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
