@@ -4,19 +4,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     const detailPflanzenAnsicht = document.getElementById("detailPflanzenAnsicht");
     const deleteButton = document.querySelector(".button_loeschen");
     const editButton = document.querySelector(".button_bearbeiten");
-    const zurueckButton = document.querySelector(".button_zurueck_profil"); // Aktualisierte Zeile
+    const zurueckButton = document.getElementById("zurueckButton");
 
     // Get the plant ID from the URL
     const params = new URLSearchParams(window.location.search);
     const plantId = params.get("id");
 
     if (!plantId) {
-        // Handle the case where the plant ID is missing in the URL
         console.error("Plant ID is missing in the URL.");
         return;
     }
 
-    // Fetch the plant details using the ID
     const { data: plant, error } = await supa.from("Plant").select().eq("id", plantId);
 
     if (error) {
@@ -24,7 +22,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return;
     }
 
-    // Ensure that there's a plant with the given ID
     if (plant.length === 0) {
         console.error("Plant not found with ID:", plantId);
         return;
@@ -32,7 +29,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const selectedPlant = plant[0];
 
-    // Fetch the signed URL for the plant's photo
     const { data: photoData, error: photoError } = await supa.from('Plant').select('photo').eq('id', plantId);
 
     if (photoError) {
@@ -42,8 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const signedUrl = await getSignedUrl(photoData[0].photo);
 
-    // Display plant details
-        detailPflanzenAnsicht.innerHTML = `
+    detailPflanzenAnsicht.innerHTML = `
         <h2 style="margin-bottom: 15px;margin-top:40px;">${selectedPlant.nickname}</h2>
         <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
         <img src="${signedUrl}" alt="Plant Photo">
@@ -53,33 +48,18 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p id="merkmale_defintionen">Standort:  ${selectedPlant.location}</p>
     `;
 
-    // Style the image
     const imgElement = detailPflanzenAnsicht.querySelector("img");
     imgElement.style.width = "400px";
     imgElement.style.height = "200px";
     imgElement.style.display = "block";
     imgElement.style.margin = "25px auto";
 
-    // Style the vom P tag -> description
     const descriptionElement = detailPflanzenAnsicht.querySelector("#description");
     descriptionElement.style.margin = "10px 0";
 
-    // Style the vom h4 tag -> merkmale
-    const merkmaleElement = detailPflanzenAnsicht.querySelector("#merkmale");
-   
-    // Style the vom hp tag -> merkmale_defintionen
-    const merkmale_defintionenElement = detailPflanzenAnsicht.querySelector("#merkmale_defintionen");
-
-    // Add event listeners to delete and edit buttons
-    zurueckButton.addEventListener("click", function () {
-        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
-        window.location.href = "meine-pflanzen.html";
-    });
-
     deleteButton.addEventListener("click", async function () {
         if (confirm("Are you sure you want to delete this plant?")) {
-            // If the user confirms the deletion
-            // Delete the plant from the database
+            // Löschen der Pflanze ...
             const { data: deletedPlant, error: deleteError } = await supa
                 .from("Plant")
                 .delete()
@@ -90,18 +70,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-            // Optionally, redirect to another page after deletion
             window.location.replace("pflanze-loeschen-bestaetigung.html");
         }
     });
-   
-    editButton.addEventListener("click", function () {
 
-    // Ändere die Hintergrundfarbe des Formulars
-    
+    editButton.addEventListener("click", function () {
+        // Anzeige des Formulars zum Bearbeiten ...
         const formFields = `
             <h2>Pflanze bearbeiten</h2>
-            <p>Hier kannst du die Eingschaften deiner Pflanze bearbeiten.</p>
+            <p>Hier kannst du die Eigenschaften deiner Pflanze bearbeiten.</p>
             <h4>Eigenschaften anpassen</h4>
             <form id="editPlantForm">
                 <label for="nickname"> <p style="margin-right: 295px;"><b>Nickname:</b><p></label>
@@ -113,15 +90,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
         `;
-    
+
         editButton.style.display = "none";
-       
-       
-
         detailPflanzenAnsicht.innerHTML = formFields;
-        
 
-        // Add event listener to the form for updating the plant details
         const editPlantForm = document.getElementById("editPlantForm");
         editPlantForm.addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -132,7 +104,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 planted: editPlantForm.planted.value,
             };
 
-            // Update the plant details in the database
             const { data: updatedPlant, error: updateError } = await supa
                 .from("Plant")
                 .update(updatedPlantData)
@@ -143,8 +114,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-            //reload site
             window.location.replace("pflanze-bearbeiten-bestaetigung.html");
         });
+    });
+
+    // Event Listener für den "Zurück" Button
+    zurueckButton.addEventListener("click", function () {
+        window.location.href = "meine-pflanzen.html";
     });
 });
