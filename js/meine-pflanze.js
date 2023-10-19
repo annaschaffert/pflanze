@@ -26,11 +26,12 @@ async function showPlants() {
         const signedUrl = await getSignedUrl(photoData[0].photo);
 
         card.innerHTML = `
-            <h3>${plant.nickname}</h3>
+        <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
+        <h3>${plant.nickname}</h3>
             <p id="merkmale_pflanzen">Pflanzenart: ${plant.species}</p>
             <p id="merkmale_pflanzen">Eingepflanzt: ${plant.planted}</p>
             <p id="merkmale_pflanzen">Standort: ${plant.location}</p>
-            <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
+          
             <a class="button_mehr" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
         `;
         cardContainer.appendChild(card);
