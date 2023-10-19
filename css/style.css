@@ -590,10 +590,7 @@ button#button_loeschen{
 
 
 
-
-
-/*Seite Meine Pflanzen -  Home*/
-
+/* Seite Meine Pflanzen - Home */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -605,39 +602,37 @@ button#button_loeschen{
     border: 1px solid #ffffff;
     padding: 10px;
     border-radius: 5px;
-    width: 300px;
+    width: 45%; /* Adjust width to leave space for the gap */
     background-color: #ffffff;
+    display: flex; /* Make this a flex container */
 }
 
-.plant-card h3 {
+.image-container {
+    width: 50%; /* Half of the card's width for the image */
+    padding: 10px; /* Adjust padding for spacing */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container {
+    width: 50%; /* Half of the card's width for the text */
+    padding: 10px; /* Adjust padding for spacing */
+}
+
+.text-container h3 {
     font-size: 1.5rem;
     font-family: Roboto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-.plant-card p {
-    margin-top: 10px;
+.text-container p {
     font-family: Roboto;
     text-align: left;
 }
 
-.plant-card img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    margin-right: 10px; 
-}
-
-#merkmale_pflanzen {
-    font-size: 14.5px;
-    font-family: Roboto;
-    font-weight: 200;
-    border-radius: 4px;
-    padding: 10px 20px;
-    margin-top: -10px;
-    width: 260px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 20px;
-}
 
 
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
