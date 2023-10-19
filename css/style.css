@@ -592,7 +592,7 @@ button#button_loeschen{
 /* Übersicht Seite - Meine Pflanzen*/
 #meine-pflanzen-haupttitel{
     margin-bottom: 30px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 #meine-pflanzen-untertitel{
@@ -703,6 +703,8 @@ button#button_loeschen{
     width: 130px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
     height: 40px;
     text-align: center;
+    margin-right: 100px;
+    margin-top: 60px;
 }
 
 .button_logout:hover{
