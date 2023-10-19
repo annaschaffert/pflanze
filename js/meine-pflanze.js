@@ -1,7 +1,7 @@
 import { supa, getSignedUrl } from "/js/supabase.js";
 
-async function showPlants() {
-    const cardContainer = document.querySelector('#card-container');
+async function showPlantsInGrid() {
+    const gridContainer = document.querySelector('.grid-container');
     const { data: plants, error } = await supa.from("Plant").select();
 
     if (error) {
@@ -10,12 +10,10 @@ async function showPlants() {
     }
 
     plants.forEach(async plant => {
-        const card = document.createElement('div');
-        card.classList.add('plant-card');
-        const plantId = plant.id; // Store the plant ID for later use
+        const gridItem = document.createElement('div');
+        gridItem.classList.add('grid-item');
+        const plantId = plant.id;
 
-
-        // Fetch the signed URL for the plant's photo
         const { data: photoData, error: photoError } = await supa.from('Plant').select('photo').eq('id', plantId);
 
         if (photoError) {
@@ -25,39 +23,30 @@ async function showPlants() {
 
         const signedUrl = await getSignedUrl(photoData[0].photo);
 
-        card.innerHTML = `
-        <img src="${signedUrl}" class="photo_pflanze" alt="Plant Photo" width="100%">
-        <h3>${plant.nickname}</h3>
-            <p id="merkmale_pflanzen">Pflanzenart: ${plant.species}</p>
-            <p id="merkmale_pflanzen">Eingepflanzt: ${plant.planted}</p>
-            <p id="merkmale_pflanzen">Standort: ${plant.location}</p>
-          
-            <a class="button_mehr" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
+        gridItem.innerHTML = `
+            <div class="image">
+                <img src="${signedUrl}" alt="Plant Photo">
+            </div>
+            <div class="text-meine-pflanze">
+                <p id="text-meine-pflanze-titel">${plant.nickname}</p>
+                <p id="text-meine-pflanze"><b>Pflanzenart: </b> ${plant.species} </p>
+                <p id="text-meine-pflanze"><b>Eingepflanzt: </b> ${plant.planted}</p>
+                <p id="text-meine-pflanze"><b>Standort: </b> ${plant.location}</p>
+                <a class="button_mehr" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
+            </div>
         `;
-        cardContainer.appendChild(card);
-    });
 
-
-    
-
-    // Add event listeners to "Mehr" buttons -> den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht
-    const mehrButtons = document.querySelectorAll('.button_mehr');
-    mehrButtons.forEach(button => {
-        button.addEventListener('click', showPlantDetails);
+        gridContainer.appendChild(gridItem);
     });
 }
 
-// Rest of the code, including showPlantDetails, remains the same
-
-//Button Pflanze hinzufpügen
+//Button Pflanze hinzufügen
 document.addEventListener("DOMContentLoaded", async function () {
-    const buttonHinzufuegen = document.querySelector(".button_pflanze_hinzufuegen"); // Aktualisierte Zeile
+    const buttonHinzufuegen = document.querySelector(".button_pflanze_hinzufuegen");
 
     buttonHinzufuegen.addEventListener("click", function () {
-        // Hier setzen Sie die URL, zu der Sie zurückkehren möchten
         window.location.href = "pflanze-hinzufuegen.html";
     });
 });
 
-
-showPlants();
+showPlantsInGrid();
