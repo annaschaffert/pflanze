@@ -444,7 +444,7 @@ input[type="email"] {
     margin-top: 20px;
 }
 .button_loeschen{
-    margin-left: 335px;
+    margin-left: 656px;
 }
 
 .button_loeschen:hover,
@@ -457,8 +457,9 @@ input[type="email"] {
 .button_zurueck_profil {
     float: left; /* Zurück-Button auf die linke Seite verschieben */
     clear: both; /* Verhindert, dass andere Elemente neben dem Zurück-Button schweben */
-    margin-top: 120px;
+    margin-top: 50px;
     margin-left: 120px;
+    position: fixed;
 }
 
 /*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
@@ -486,8 +487,6 @@ input#nickname{
     line-height: normal;
 }
 
-
-
 input#species{
     background-color: #F5F5F5;
     color: #323232;
@@ -505,10 +504,14 @@ input#planted{
     text-align: left;
     font-family: Roboto;
     font-size: 15px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    margin-right: 300px;
+    margin-right: 320px;
+    width: 350px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button#speichern_knopf{
