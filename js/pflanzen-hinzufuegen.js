@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const registrationForm = document.getElementById("registration-form-plants");
     const locationDropdown = document.getElementById("location-hinzuefuegen");
 
+
     // Funktion zum Abrufen und Anzeigen von Standorten
     async function populateLocations() {
         try {
