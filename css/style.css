@@ -92,8 +92,6 @@ p{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-    
-
 #Titel_Anmedlung{
     color: #323232;
     text-align: center;
@@ -179,10 +177,37 @@ p{
 
 
 /*Registrierungs-Seite*/
+
+#Hauptitel_Registrierung{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Knewave;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 120px;
+}
+
+#Untertitel_registration{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Knewave;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
 .container {
-    max-width: 400px;
-    margin: auto;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    margin-right: 39px;
+
 }
   
 .form-group {
@@ -199,19 +224,21 @@ input[type="text"],
 input[type="email"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
   
 .button_registrierung {
-    padding: 10px 20px;
+    padding: 10px 0;
     background-color: #589A8D;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    float: right;
-    width: 100%;
+    width: 282px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 37px;
+    text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+    margin-top: 10px;
 }
 
 .button_registrierung:hover {
@@ -219,31 +246,15 @@ input[type="email"] {
     color: #323232; 
 }
 
-h1.registration{
-    color: #F5F5F5;
-    margin-block-start: 1em;
-    margin-block-end: 0em;
-}
-
-h2.registration{
-    color: #F5F5F5;
-    margin-block-start: 0em;
-    margin-block-end: 0.em;
-}
-
 #wrapper {
-    max-width: 410px;
+    max-width: 260px;
+    margin-top: 13px;
 }
 
-#first {
-    width: 45%;
-    float: left;
+#email-registrierung{
+    max-width: 260px;
 }
 
-#second {
-    width: 45%;
-    float: right;
-}
 
 
 
