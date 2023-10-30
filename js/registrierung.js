@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const vorname = document.getElementById("vorname").value;
       const nachname = document.getElementById("nachname").value;
-      const email = document.getElementById("email").value;
+      const email = document.getElementById("email-registrierung").value;
       const registrierungButton = document.querySelector(".button_registrierung"); // Aktualisierte Zeile
 
   
