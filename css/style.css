@@ -635,25 +635,26 @@ button#button_loeschen{
 
 
 
+
 /* Übersicht Seite - Meine Pflanzen*/
-#meine-pflanzen-haupttitel{
+#meine-pflanzen-haupttitel {
     margin-bottom: 30px;
     margin-top: 50px;
 }
 
-#meine-pflanzen-untertitel{
+#meine-pflanzen-untertitel {
     margin-bottom: 55px;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Nur 2 Spalten pro Zeile */
-    grid-template-rows: auto; /* Automatische Zeilenhöhe */
-    grid-gap: 40px; /* Abstand zwischen den Elementen */
-   
-    margin-left: 300px;
-    max-width: 900px; /* Begrenzt die maximale Breite des Rasters */
-    padding: 0 20px; /* Seitenabstand links und rechts hinzufügen */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        justify-content: center; /* Hier hinzugefügt */
 }
 
 .grid-item {
@@ -663,7 +664,8 @@ button#button_loeschen{
 }
 
 .image {
-    flex: 1; /* Lässt das Bild den verfügbaren Platz füllen */
+    flex: 1;
+    margin-right: 5px;
 }
 
 .image img {
@@ -671,30 +673,56 @@ button#button_loeschen{
     height: 170px;
 }
 
-#text-meine-pflanze-titel{
-    margin-left: 30px; /* Linker Abstand */
-    padding-right: 140px;
+#text-meine-pflanze-titel {
+    margin-left: 20px;
+    padding-right: 20px;
     font-size: 20px;
-    margin-top: -5px ;
+    margin-top: -5px;
     font-weight: 600;
+    text-align: left;
+    padding-left: 5px;
 }
 
 #text-meine-pflanze {
-    flex: 1; /* Lässt den Text den verfügbaren Platz füllen */
-    text-align: left; /* Text linksbündig ausrichten */
-    margin-left: 30px; /* Linker Abstand */
+    flex: 1;
+    text-align: left;
+    margin-left: 20px; /* Anpassung des linken Abstands */
     padding-right: 20px;
     font-size: 14px;
     font-weight: 200;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -6px;
 }
 
+/*Icons*/
+
+.icon-standort{
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.icon-eingepflanzt{
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.icon-pflanzenart{
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
 
 
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
     padding-bottom: 15px;
-    margin-top: 7px;
     background-color: #F5F5F5;
     color: #323232;
     border: none;
@@ -702,12 +730,12 @@ button#button_loeschen{
     cursor: pointer;
     float: right;
     width: 120px;
-    height: 7px;
+    height: 5px;
     font-family: Roboto;
     text-decoration: none;
     text-align: center;
     font-size: 10px;
-    margin-right: 22px;
+    margin-left: 22px;
 }
     
 .button_mehr:hover {
@@ -757,3 +785,11 @@ button#button_loeschen{
     background-color: #589A8D; 
     color: #fff;
 }
+
+
+
+
+
+
+
+
