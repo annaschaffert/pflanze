@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
         <img src="${signedUrl}" alt="Plant Photo">
         <h4 id="merkmale">Merkmale</h4>
-        <p id="merkmale_defintionen">Pflanzenart:  ${selectedPlant.species}</p>
+        <p id="merkmale_defintionen"> Pflanzenart: ${selectedPlant.species}</p>
         <p id="merkmale_defintionen">Eingepflanzt:  ${selectedPlant.planted}</p>
         <p id="merkmale_defintionen">Standort:  ${selectedPlant.location}</p>
     `;
