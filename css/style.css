@@ -443,8 +443,6 @@ input[type="email"] {
     max-width: 400px;
 }
 
-
-
 /*Pflanzen Profil Seite*/
 
 #merkmale{
@@ -454,15 +452,28 @@ input[type="email"] {
 #merkmale_defintionen{
     font-size: 14.5px;
     font-weight: 200;
-    margin-left: 655px;
     text-align: left;
     padding: 10px 20px;
-    width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 20px;
+    width: 370px; /* Breite der Formularbox, kann nach Bedarf angepasst werden */
+    height: auto; /* Du kannst die Höhe auf "auto" setzen, um sie je nach Inhalt anzupassen */
     border-radius: 4px;
-    background-color:#F5F5F5;
+    background-color: #F5F5F5;
+    margin: 0 auto; /* Zentriert das Element horizontal */
+    margin-top: 15px; /* Ändere den Wert, um den vertikalen Abstand anzupassen */
     padding-left: 15px; /* Linker Abstand */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+#buttonContainer {
+    display: flex;
+    justify-content: center; /* Horizontales Zentrieren */
+    align-items: center; /* Vertikales Zentrieren */
+    margin-top: 10px; /* Anpassen des vertikalen Abstands */
+}
+
 
 .button_loeschen,
 .button_bearbeiten,
@@ -478,17 +489,17 @@ input[type="email"] {
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
     margin: 10px; /* Abstand zwischen den Buttons */
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .button_loeschen,
 .button_bearbeiten {
     margin-right: 10px; /* Abstand zwischen den Buttons "Löschen" und "Bearbeiten" */
-    margin-top: 20px;
+    margin-top: 35px;
 }
-.button_loeschen{
-    margin-left: 656px;
-}
+
 
 .button_loeschen:hover,
 .button_bearbeiten:hover,
@@ -504,6 +515,7 @@ input[type="email"] {
     margin-left: 120px;
     position: fixed;
 }
+
 
 /*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
 
