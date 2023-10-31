@@ -30,6 +30,10 @@ const pflanzenartIcon = `
 `;
 
 
+
+
+// ...
+
 function formatDate(dateString) {
     const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
     const date = new Date(dateString);
@@ -38,7 +42,11 @@ function formatDate(dateString) {
 
 async function showPlantsInGrid() {
     const gridContainer = document.querySelector('.grid-container');
-    const { data: plants, error } = await supa.from("Plant").select();
+    const { data: plants, error } = await supa.from("Plant")
+        .select(`
+            *,
+            location:Location(name)  // Hier wird die Verknüpfung zur "Location"-Tabelle erstellt
+        `);
 
     if (error) {
         console.error('Fehler beim Abrufen der Pflanzendaten:', error);
@@ -65,7 +73,7 @@ async function showPlantsInGrid() {
             </div>
             <div class="text-meine-pflanze">
                 <p id="text-meine-pflanze-titel">${plant.nickname}</p>
-                <p id="text-meine-pflanze">${standortIcon} ${plant.location}</p>
+                <p id="text-meine-pflanze">${standortIcon} ${plant.location.name}</p>
                 <p id="text-meine-pflanze">${eingepflanztIcon} ${formatDate(plant.planted)}</p>
                 <p id="text-meine-pflanze">${pflanzenartIcon} ${plant.species}</p>
                 <a class="button_mehr" href="pflanzen-profil.html?id=${plantId}">bearbeiten & löschen</a>
@@ -75,6 +83,7 @@ async function showPlantsInGrid() {
         gridContainer.appendChild(gridItem);
     });
 }
+
 
 // Button Pflanze hinzufügen
 document.addEventListener("DOMContentLoaded", async function () {
