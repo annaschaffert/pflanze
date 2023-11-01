@@ -255,7 +255,6 @@ input[type="email"] {
     max-width: 260px;
 }
 
-
 /*pflanze-hinzufügen*/
 
 .button_hinzufuegen {
@@ -268,6 +267,12 @@ input[type="email"] {
     float: right;
     width: 100%;
     margin-top: 30px;
+    margin: auto 0;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    
 }
 
 .button_hinzufuegen:hover {
@@ -376,7 +381,6 @@ input#planted-hinzuefuegen{
     font-family: Roboto;
     font-weight: 200;
 }
-
 
 /*pflanze-hinzufügen-bestätigung*/
 
@@ -517,7 +521,7 @@ input#nickname{
     font-family: Roboto;
     font-size: 15px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     line-height: normal;
 }
 
@@ -528,7 +532,7 @@ input#species{
     font-family: Roboto;
     font-size: 15px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     line-height: normal;
 }
 
@@ -539,7 +543,7 @@ input#planted{
     font-family: Roboto;
     font-size: 15px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     line-height: normal;
     cursor: pointer;
 }
@@ -570,8 +574,7 @@ input[type="email"] {
     background-color: #F5F5F5;
     font-family: Roboto;
     font-size: 14.5px;
-    font-weight: 300;
-
+    font-weight: 200;
 }
   
 button#speichern_knopf{
@@ -585,11 +588,11 @@ button#speichern_knopf{
     height: 40px;
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
-    margin-top: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 button#speichern_knopf:hover{
@@ -656,8 +659,6 @@ button#button_loeschen{
     background-color: #589A8D; 
     color: #fff;
 }
-
-
 
 
 /* Übersicht Seite - Meine Pflanzen*/
@@ -977,5 +978,124 @@ p#description {
     
 }
 
+/*--------------------Pflanzen Profil Übersicht - BEARBEITUNG------------------------------*/
+
+p{
+    font-size: 14px;
+}
+
+form#editPlantForm {
+    font-size: 14px;
+    width: 350px; /* Breite der Formularbox, kann nach Bedarf angepasst werden */
+    width: 300px;
+    font-weight: 200;
+}
+
+input#nickname{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+input#species{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+input#planted{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+input[type="text"],
+input[type="email"] {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+button#speichern_knopf{
+    width: 155px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 34px;
+    font-size: 11px;
     
+}
+
+/*-------------------Seite Bestätigung Pflanze bearbeiten----------------------*/
+.button_meine_pflanzen{
+    width: 155px; 
+    height: 34px;
+    font-size: 11px;
+}
+
+/*-------------------Seite Bestätigung Pflanze löschen----------------------*/
+
+.button_pflanze_loeschen_bestaetigung{
+    width: 155px; 
+    height: 34px;
+    font-size: 11px;
+}
+
+/*-------------------Seite Bestätigung Pflanze hinzugefügt----------------------*/
+
+.button_hinzufuegen_bestaetigung{
+    width: 155px; 
+    height: 34px;
+    font-size: 11px;
+}
+
+/*-------------------Seite Pflanze hinzufügen----------------------*/
+
+#Pflanzen-hinzufuegen-Titel{
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.button_hinzufuegen {
+    width: 155px; 
+    height: 34px;
+    font-size: 11px;
+    text-align: center;
+    display: block; /* In einer horizontalen Linie anzeigen */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-right: 80px;
+    margin-top: 20px;
+}
+
+#nickname-hinzuefuegen{
+    font-size: 14px;
+    width: 300px;
+    margin-left: 20px;    
+}
+
+#species-hinzuefuegen{
+    font-size: 14px;
+    width: 300px;   
+    margin-left: 20px;   
+}
+
+input#planted-hinzuefuegen{
+    font-size: 14px;
+    width: 290px;
+    margin-left: 20px;     
+}
+
+#photo-hinzuefuegen{
+    font-family: Roboto;
+    font-weight: 200;
+    margin-left: 20px;  
+}
+
+#file-upload-button{
+    font-family: Roboto;
+    font-weight: 200;
+}
+
+/* CSS für das Location-Formularfeld */
+#location-hinzuefuegen {
+    font-size: 14px;
+    width: 323px; 
+    margin-left: 20px;  
+}
+
 }
