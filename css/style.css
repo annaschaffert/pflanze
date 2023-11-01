@@ -463,7 +463,6 @@ input[type="email"] {
     padding-left: 15px; /* Linker Abstand */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
@@ -472,6 +471,7 @@ input[type="email"] {
     justify-content: center; /* Horizontales Zentrieren */
     align-items: center; /* Vertikales Zentrieren */
     margin-top: 10px; /* Anpassen des vertikalen Abstands */
+    
 }
 
 
@@ -498,6 +498,7 @@ input[type="email"] {
 .button_bearbeiten {
     margin-right: 10px; /* Abstand zwischen den Buttons "Löschen" und "Bearbeiten" */
     margin-top: 35px;
+
 }
 
 
@@ -509,11 +510,12 @@ input[type="email"] {
 }
 
 .button_zurueck_profil {
-    float: left; /* Zurück-Button auf die linke Seite verschieben */
-    clear: both; /* Verhindert, dass andere Elemente neben dem Zurück-Button schweben */
-    margin-top: 50px;
-    margin-left: 120px;
-    position: fixed;
+    position: absolute; /* Ändere die Position auf "absolute" */
+    left: 20px; /* Setze den Abstand zum linken Rand */
+    bottom: 20px; /* Setze den Abstand zum oberen Rand */
+    margin-top: 0; /* Entferne den oberen Abstand */
+    margin-left: 110px; /* Entferne den linken Abstand */
+    margin-bottom: 70px;
 }
 
 
