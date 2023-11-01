@@ -108,9 +108,9 @@ deleteButton.addEventListener("click", async function () {
             <form id="editPlantForm">
                 <label for="nickname"> <p style="margin-right: 295px;"><b>Nickname:</b><p></label>
                 <input type="text" id="nickname" name="nickname" value="${selectedPlant.nickname}" required>
-                <label for="species"><p style="margin-right: 310px;"><b>Species:</b><p></label>
+                <label for="species"><p style="margin-right: 310px;"><b>Pflanzenart:</b><p></label>
                 <input type="text" id="species" name="species" value="${selectedPlant.species}" required>
-                <label for="planted"><p style="margin-right: 310px;"><b>Planted:</b><p></label>
+                <label for="planted"><p style="margin-right: 310px;"><b>Eingepflanzt:</b><p></label>
                 <input type="text" id "planted" name="planted" value="${formattedPlantedDate}" required>
                 <button type="submit" id="speichern_knopf">Speichern</button>
             </form>
