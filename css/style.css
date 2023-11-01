@@ -267,13 +267,13 @@ input[type="email"] {
     cursor: pointer;
     float: right;
     width: 100%;
+    margin-top: 30px;
 }
 
 .button_hinzufuegen:hover {
     background-color: #589A8D;
     color: #fff; 
 }
-
 
 #nickname-hinzuefuegen{
     background-color: #F5F5F5;
@@ -302,23 +302,33 @@ input[type="email"] {
 }
 
 input#planted-hinzuefuegen{
-    background-color: #F5F5F5;
+        background-color: #F5F5F5;
         color: #323232;
         text-align: left;
         font-family: Roboto;
         font-size: 15px;
         font-weight: 300;
-        width: 175px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+        width: 365px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
         height: 18px;
         padding: 10px 20px;
         cursor: pointer;
         border: 1px solid #ccc;
         border-radius: 5px;
         padding-left: 10px;
-        margin-right: 200px;
 }
 
-#location-hinzuefuegen{
+#photo-hinzuefuegen{
+    font-family: Roboto;
+    font-weight: 200;
+}
+
+#file-upload-button{
+    font-family: Roboto;
+    font-weight: 200;
+}
+
+/* CSS für das Location-Formularfeld */
+#location-hinzuefuegen {
     background-color: #F5F5F5;
     color: #323232;
     text-align: left;
@@ -327,24 +337,24 @@ input#planted-hinzuefuegen{
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    width: 178px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 40px;
+    width: 397px;
+    height: 37px;
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid #ccc;
-    padding-left: 10px;
-    padding-right:10px;
+    padding-left: 7px;
 }
 
 
-
+/* CSS für das Dropdown-Menü */
 .courses {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-   
+    width: 397px; /* Breite des Dropdown-Menüs anpassen */
+    padding-right: 20px;
 }
 
 .courses li {
@@ -362,13 +372,11 @@ input#planted-hinzuefuegen{
     text-decoration: none;
     color: #323232;
     display: block;
-    padding: 10px;
+    padding-right: 10px;
+    font-family: Roboto;
+    font-weight: 200;
 }
 
-.courses li:hover {
-    background-color: #589A8D;
-    color: white;
-}
 
 /*pflanze-hinzufügen-bestätigung*/
 
@@ -388,8 +396,10 @@ input#planted-hinzuefuegen{
     height: 40px;
     text-align: center;
     display: block; /* In einer horizontalen Linie anzeigen */
-    margin-left: 760px;
-    margin-top: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .button_hinzufuegen_bestaetigung:hover{
@@ -397,57 +407,8 @@ input#planted-hinzuefuegen{
     color: #fff;
 }
 
-/*Bearbeitungs-Seite*/
-.container-bearbeitung {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-  
-.form-group-bearbeitung {
-    margin-bottom: 15px;
-}
-  
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-  
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-  
-.button_speichern {
-    padding: 10px 20px;
-    padding-right: 100px;
-    background-color: #589A8D;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    float: right;
-}
-.button_speichern:hover {
-    background-color: #CEE6D8;
-    color: #323232; 
-}
-
-#wrapper-bearbeitung {
-    max-width: 400px;
-}
 
 /*Pflanzen Profil Seite*/
-
-#merkmale{
-    margin-right: 320px;
-}
 
 #merkmale_defintionen{
     font-size: 14.5px;
@@ -471,9 +432,7 @@ input[type="email"] {
     justify-content: center; /* Horizontales Zentrieren */
     align-items: center; /* Vertikales Zentrieren */
     margin-top: 10px; /* Anpassen des vertikalen Abstands */
-    
 }
-
 
 .button_loeschen,
 .button_bearbeiten,
@@ -524,13 +483,17 @@ input[type="email"] {
 form#editPlantForm {
     font-size: 14.5px;
     font-weight: 200;
-    margin-left: 655px;
     text-align: left;
     padding: 10px 20px;
-    width: 370px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 20px;
+    width: 350px; /* Breite der Formularbox, kann nach Bedarf angepasst werden */
+    height: auto; /* Du kannst die Höhe auf "auto" setzen, um sie je nach Inhalt anzupassen */
+    border-radius: 4px;
+    margin: 0 auto; /* Zentriert das Element horizontal */
+    margin-top: 15px; /* Ändere den Wert, um den vertikalen Abstand anzupassen */
     padding-left: 15px; /* Linker Abstand */
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 input#nickname{
@@ -561,20 +524,46 @@ input#planted{
     text-align: left;
     font-family: Roboto;
     font-size: 15px;
+    font-style: normal;
     font-weight: 300;
-    margin-right: 320px;
-    width: 350px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 20px;
-    padding: 10px 20px;
+    line-height: normal;
     cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
+.container-bearbeitung {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+.form-group-bearbeitung {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-family: Roboto;
+    font-size: 14.5px;
+    font-weight: 300;
+
+}
+  
 button#speichern_knopf{
     padding: 10px 0;
     background-color: #323232;
-    color: #fff;
+    color: #F5F5F5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -582,8 +571,11 @@ button#speichern_knopf{
     height: 40px;
     text-align: center;
     display: inline-block; /* In einer horizontalen Linie anzeigen */
-    margin-right: 200px;
     margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
 }
 
 button#speichern_knopf:hover{
@@ -608,7 +600,9 @@ button#button_loeschen{
     height: 40px;
     text-align: center;
     display: block; /* In einer horizontalen Linie anzeigen */
-    margin-left: 760px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .button_meine_pflanzen:hover{
@@ -638,8 +632,10 @@ button#button_loeschen{
     height: 40px;
     text-align: center;
     display: block; /* In einer horizontalen Linie anzeigen */
-    margin-left: 760px;
     margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .button_pflanze_loeschen_bestaetigung:hover{
@@ -770,7 +766,6 @@ button#button_loeschen{
     display: block; /* In einer horizontalen Linie anzeigen */
     margin: 0 auto;
     margin-top: 100px;
-
 }
 
 .button_pflanze_hinzufuegen:hover{
