@@ -78,8 +78,6 @@ p{
 
 /* LogIn-Seite */
 
-
-
 /*Hintergrundbild*/
 #Hintergrundbild {
     background-image: url(../img/scott-webb-eA2z1JSzZFI-unsplash.jpg);
@@ -272,7 +270,7 @@ input[type="email"] {
     align-items: center;
     display: flex;
     text-align: center;
-    
+
 }
 
 .button_hinzufuegen:hover {
@@ -1097,5 +1095,99 @@ input#planted-hinzuefuegen{
     width: 323px; 
     margin-left: 20px;  
 }
+
+/*-------------------Seite Registrierung----------------------*/
+
+
+#Hauptitel_Registrierung{
+    font-size: 60px;
+}
+
+#Untertitel_registration{
+    font-size: 35px;
+}
+
+.button_registrierung {
+    padding: 10px 0;
+    background-color: #589A8D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 282px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 37px;
+    text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+    margin-top: 10px;
+}
+
+.button_registrierung:hover {
+    background-color: #CEE6D8;
+    color: #323232; 
+}
+
+#wrapper {
+    max-width: 260px;
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+#email-registrierung{
+    max-width: 260px;
+}
+
+/*-------------------Seite Anmeldung----------------------*/
+
+#Titel_Anmedlung{
+    font-size: 60px;
+}
+
+#Untertitel_Anmedlung{
+    font-size: 35px;
+}
+
+.container_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Stil für das E-Mail-Eingabefeld */
+#email {
+    width: 260px;
+    height: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+/* Stil für den "Anmelden" Button */
+#sendMagicLinkButton {
+    padding: 10px 0;
+    background-color: #589A8D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 40px;
+    text-align: center;
+    display: inline-block; /* In einer horizontalen Linie anzeigen */
+    margin-top: 30px;
+}
+
+#sendMagicLinkButton:hover {
+    padding: 10px 0;
+    background-color: #CEE6D8;
+    color: #323232;
+}
+
+
+  
+
 
 }
