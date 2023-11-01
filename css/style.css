@@ -427,6 +427,7 @@ input#planted-hinzuefuegen{
     justify-content: center;
 }
 
+
 #buttonContainer {
     display: flex;
     justify-content: center; /* Horizontales Zentrieren */
@@ -435,8 +436,7 @@ input#planted-hinzuefuegen{
 }
 
 .button_loeschen,
-.button_bearbeiten,
-.button_zurueck_profil {
+.button_bearbeiten{
     padding: 10px 0;
     background-color: #323232;
     color: #fff;
@@ -462,21 +462,35 @@ input#planted-hinzuefuegen{
 
 
 .button_loeschen:hover,
-.button_bearbeiten:hover,
-.button_zurueck_profil:hover {
+.button_bearbeiten:hover {
     background-color: #589A8D;
     color: #fff;
 }
 
 .button_zurueck_profil {
-    position: absolute; /* Ändere die Position auf "absolute" */
-    left: 20px; /* Setze den Abstand zum linken Rand */
-    bottom: 20px; /* Setze den Abstand zum oberen Rand */
-    margin-top: 0; /* Entferne den oberen Abstand */
-    margin-left: 110px; /* Entferne den linken Abstand */
     margin-bottom: 70px;
+    font-size: 12px;
+    width: 140px;
+    height: 25px;
+    background-color: #589A8D;
+    color: #fff;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
+.button_zurueck_profil:hover{
+    color: #fff;
+    background-color: #323232
+}
 
 /*Pflanzen Profil Seite - 2. Seite BEARBEITEN */
 
@@ -774,24 +788,26 @@ button#button_loeschen{
 }
 
 .button_logout {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     padding: 10px 0;
-    background-color: #323232;
+    padding-bottom: 25px;
+    background-color:#589A8D;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 130px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
-    height: 40px;
+    width: 140px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 25px;
     text-align: center;
-    margin-right: 100px;
-    margin-top: 60px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: block; /* In einer horizontalen Linie anzeigen */
+    margin-top: 30px;
 }
 
 .button_logout:hover{
-    background-color: #589A8D; 
+    background-color: #323232;
     color: #fff;
 }
 
@@ -802,3 +818,164 @@ button#button_loeschen{
 
 
 
+
+
+
+
+/*Responsive Design*/
+
+/* Für Bildschirmbreite von 1160px und kleiner */
+@media (max-width: 1160px) {
+
+/*--------------------Meine Pflanze - Home------------------------------*/
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        max-width: 500px;
+    }
+
+/*--------------------Pflanzen Profil Seite------------------------------*/
+
+
+
+    
+}
+
+/* Für Bildschirmbreite von 720px und kleiner */
+@media (max-width: 720px) {
+    
+
+
+    
+}
+
+/* Für Bildschirmbreite von 480px und kleiner */
+@media (max-width: 480px) {
+    
+/*--------------------Meine Pflanze - Home------------------------------*/
+
+.grid-container {
+    grid-gap: 10px;
+    max-width: 200px;
+}
+
+#meine-pflanzen-haupttitel {
+    font-size: 40px;
+}
+
+#meine-pflanzen-untertitel {
+    font-size: 14px;
+}
+
+.image img {
+    width: 200px;
+    height: 120px;
+}
+
+#text-meine-pflanze-titel {
+    font-size: 20px;
+    font-size: 14px;
+}
+
+#text-meine-pflanze {
+    font-size: 14px;
+    font-size: 12px;
+}
+
+.icon-standort{
+    height: 18px;
+    width: 18px;
+}
+
+.icon-eingepflanzt{
+    height: 18px;
+    width: 18px;
+}
+
+.icon-pflanzenart{
+    height: 18px;
+    width: 18px;
+}
+
+.button_mehr {
+    padding: 5px 15px;
+    padding-bottom: 10px;
+    width: 90px;
+    height: 5px;
+    font-size: 10px;
+    margin-left: 22px;
+    font-size: 9px;
+}
+    
+.button_pflanze_hinzufuegen{
+    padding: 10px 0;
+    width: 160px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 34px;
+    margin-top: 65px;
+    font-size: 11px;
+}
+
+
+.button_logout {
+    padding: 5px 0;
+    width: 120px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 23px;
+    font-size: 9px;
+    margin-top: 25px;
+}
+
+
+/*--------------------Pflanzen Profil Übersicht------------------------------*/
+
+#merkmale_defintionen{
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 300px; 
+    margin-top: 15px; 
+    padding-left: 15px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+p#description {
+    font-size: 14px;
+}
+
+#buttonContainer {
+    margin-top: 10px; /* Anpassen des vertikalen Abstands */
+}
+
+.button_loeschen,
+.button_bearbeiten{
+    padding: 10px 0;
+    width: 155px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 34px;
+    font-size: 11px;
+}
+
+.button_loeschen,
+.button_bearbeiten {
+    margin-right: 10px; /* Abstand zwischen den Buttons "Löschen" und "Bearbeiten" */
+    margin-top: 35px;
+
+}
+
+.button_loeschen:hover,
+.button_bearbeiten:hover {
+    background-color: #589A8D;
+    color: #fff;
+}
+
+.button_zurueck_profil {
+    margin-bottom: 70px;
+    width: 120px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
+    height: 23px;
+    font-size: 9px;
+    margin-top: 13px;
+    
+}
+
+    
+}
