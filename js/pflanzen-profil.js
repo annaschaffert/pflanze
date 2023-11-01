@@ -51,15 +51,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     const locationData = await getLocationName(selectedPlant.location_id);
 
    
-
-
-
-
     // HTML-Inhalt für die Pflanzendetails erstellen und einfügen
     detailPflanzenAnsicht.innerHTML = `
-        <h2 style="margin-bottom: 15px;margin-top:40px;">${selectedPlant.nickname}</h2>
+        <h2 style="margin-bottom: 15px; margin-top: 40px;">${selectedPlant.nickname}</h2>
         <p id="description">Hier siehst du die Merkmale deiner Pflanze</p>
-        <img src="${signedUrl}" alt="Plant Photo">
+        <img src="${signedUrl}" alt="Plant Photo" id="plant-photo">
         <h4 id="merkmale">Merkmale</h4>
         <p id="merkmale_defintionen">Pflanzenart: ${selectedPlant.species}</p>
         <p id="merkmale_defintionen">Eingepflanzt: ${formattedPlantedDate}</p>
@@ -67,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     `;
 
     // Stiländerungen für das Bild und die Beschreibung vornehmen
-    const imgElement = detailPflanzenAnsicht.querySelector("img");
+    const imgElement = detailPflanzenAnsicht.querySelector("#plant-photo");
     imgElement.style.width = "400px";
     imgElement.style.height = "200px";
     imgElement.style.display = "block";
@@ -75,6 +71,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const descriptionElement = detailPflanzenAnsicht.querySelector("#description");
     descriptionElement.style.margin = "10px 0";
+
+    // Media Query für Bildschirme mit einer Breite von 480px oder kleiner
+    if (window.matchMedia("(max-width: 480px)").matches) {
+        imgElement.style.width = "325px"; // Ändere die Breite nach deinen Wünschen
+        imgElement.style.height = "auto"; // Behalte das Seitenverhältnis bei
+        imgElement.style.margin = "25px auto"; // Anpassung des Abstands für kleine Bildschirme
+    }
 
 // Event-Listener für den "Löschen" Button hinzufügen
 deleteButton.addEventListener("click", async function () {
