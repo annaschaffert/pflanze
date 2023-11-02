@@ -270,6 +270,8 @@ input[type="email"] {
     align-items: center;
     display: flex;
     text-align: center;
+    padding-left: 140px;
+
 
 }
 
@@ -1058,6 +1060,7 @@ button#speichern_knopf{
     margin: 0 auto;
     margin-right: 80px;
     margin-top: 20px;
+    padding-left: 20px;
 }
 
 #nickname-hinzuefuegen{
