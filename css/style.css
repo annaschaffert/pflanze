@@ -199,13 +199,16 @@ p{
 }
 
 .container {
+    max-width: 400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 45px;
-
+    align-items: center;
+    text-align: center;
+    padding-right: 22px;
 }
+
   
 .form-group {
     margin-bottom: 15px;
@@ -270,13 +273,20 @@ input[type="email"] {
     display: flex;
     text-align: center;
     padding-left: 140px;
-
-
 }
-
 .button_hinzufuegen:hover {
     background-color: #589A8D;
     color: #fff; 
+}
+
+.container-pflanze-hinzufuegen{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #nickname-hinzuefuegen{
@@ -324,11 +334,18 @@ input#planted-hinzuefuegen{
 #photo-hinzuefuegen{
     font-family: Roboto;
     font-weight: 200;
+    margin: auto 0;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    
 }
-
 #file-upload-button{
     font-family: Roboto;
     font-weight: 200;
+    
+    
 }
 
 /* CSS für das Location-Formularfeld */
@@ -832,13 +849,7 @@ button#button_loeschen{
         grid-template-columns: 1fr;
         grid-gap: 20px;
         max-width: 500px;
-    }
-
-/*--------------------Pflanzen Profil Seite------------------------------*/
-
-
-
-    
+    }    
 }
 
 /* Für Bildschirmbreite von 720px und kleiner */
@@ -1114,6 +1125,10 @@ input#planted-hinzuefuegen{
     font-size: 35px;
 }
 
+.container {
+    padding-right: 40px;
+}
+
 .button_registrierung {
     padding: 10px 0;
     background-color: #589A8D;
@@ -1192,9 +1207,4 @@ input#planted-hinzuefuegen{
     background-color: #CEE6D8;
     color: #323232;
 }
-
-
-  
-
-
 }
