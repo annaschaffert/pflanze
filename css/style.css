@@ -204,7 +204,6 @@ p{
     align-items: center;
     justify-content: center;
     margin-top: 45px;
-    margin-right: 39px;
 
 }
   
@@ -1046,7 +1045,7 @@ button#speichern_knopf{
 
 #Pflanzen-hinzufuegen-Titel{
     font-size: 40px;
-    margin-left: 40px;
+    
 }
 
 .button_hinzufuegen {
@@ -1061,30 +1060,31 @@ button#speichern_knopf{
     margin-right: 80px;
     margin-top: 20px;
     padding-left: 20px;
+
 }
 
 #nickname-hinzuefuegen{
     font-size: 14px;
     width: 300px;
-    margin-left: 20px;    
+      
 }
 
 #species-hinzuefuegen{
     font-size: 14px;
     width: 300px;   
-    margin-left: 20px;   
+    
 }
 
 input#planted-hinzuefuegen{
     font-size: 14px;
     width: 290px;
-    margin-left: 20px;     
+       
 }
 
 #photo-hinzuefuegen{
     font-family: Roboto;
     font-weight: 200;
-    margin-left: 20px;  
+     
 }
 
 #file-upload-button{
@@ -1096,7 +1096,7 @@ input#planted-hinzuefuegen{
 #location-hinzuefuegen {
     font-size: 14px;
     width: 323px; 
-    margin-left: 20px;  
+    
 }
 
 /*-------------------Seite Registrierung----------------------*/
