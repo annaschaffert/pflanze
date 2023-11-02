@@ -844,7 +844,11 @@ button#button_loeschen{
 /* Für Bildschirmbreite von 720px und kleiner */
 @media (max-width: 720px) {
     
+/*-------------------Seite Pflanze hinzufügen----------------------*/
 
+#Pflanzen-hinzufuegen-Titel{
+    font-size:40px;
+}
 
     
 }
@@ -1044,8 +1048,8 @@ button#speichern_knopf{
 /*-------------------Seite Pflanze hinzufügen----------------------*/
 
 #Pflanzen-hinzufuegen-Titel{
-    font-size: 40px;
-    
+    font-size:40px;
+    white-space: normal; /* Erlaubt Zeilenumbrüche */
 }
 
 .button_hinzufuegen {
