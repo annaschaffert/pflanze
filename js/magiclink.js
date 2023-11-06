@@ -2,7 +2,7 @@ import { supa } from "/js/supabase.js";
 
 // Funktion, um Magic Link zu senden
 async function sendMagicLink() {
-    const email = document.getElementById('emailInput').value;
+    const email = document.getElementById('email').value;
     const { error } = await supa.auth.signIn({ email });
     
     if (error) {
