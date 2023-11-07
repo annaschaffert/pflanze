@@ -1,70 +1,73 @@
 import { supa } from "/js/supabase.js";
 
-// Funktion zum Senden eines Magic Links
+// Funktion, um Magic Link zu senden
 async function sendMagicLink() {
     const email = document.getElementById('email').value;
     const { error } = await supa.auth.signIn({ email });
     
     if (error) {
-        console.error("Fehler beim Senden des Magic Links: ", error.message);
+        console.error("Error sending magic link: ", error.message);
     } else {
-        console.log("Magic Link wurde an ", email, " gesendet.");
+        console.log("Magic link sent to ", email);
     }
 }
 
-// Funktion zur Aktualisierung des Benutzerstatus
+// Funktion, um User Status zu aktualisieren
 function updateUserStatus(user) {
     const userStatusElement = document.getElementById('userStatus');
     
     if (user) {
-        console.log(user);
-        userStatusElement.textContent = `Angemeldet als: ${user.email}`;
-    
+        console.log("User")
+        userStatusElement.textContent = `Authenticated as: ${user.email}`;
+       // window.location.href = "/meine-pflanzen.html";
     } else {
-        userStatusElement.textContent = "Nicht angemeldet.";
+        userStatusElement.textContent = "Not authenticated.";
     }
 }
 
-// Prüfe und zeige den anfänglichen Benutzerstatus an
+// Prüfe und zeige den initialen User Status an
 const initialUser = supa.auth.user();
 updateUserStatus(initialUser);
 
-// Eventlistener für den Magic Link Button
+// Eventlistener für Magic Link Button
 document.getElementById('sendMagicLinkButton').addEventListener('click', sendMagicLink);
 
-// Listener für Änderungen des Authentifizierungsstatus
-// Der Benutzerstatus wird aktualisiert, wenn sich der Authentifizierungsstatus ändert
+// Listener, für Änderungen des Auth Status
+// UserStatus wird aktualisiert, wenn sich der Auth Status ändert
+// Listener, für Änderungen des Auth Status
 supa.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN") {
-        console.log("Benutzer angemeldet: ", session.user);
+        console.log("User signed in: ", session.user);
         updateUserStatus(session.user);
-
-        // Weiterleitung zur Seite "meine-pflanzen.html"
-        window.location.href = "meine-pflanzen.html";
+        
+        // Hier füge die Weiterleitung ein
+        window.location.href = "meine-pflanzen.html"; // Hier weiterleiten
     } else if (event === "SIGNED_OUT") {
-        console.log("Benutzer abgemeldet");
+        console.log("User signed out");
         updateUserStatus(null);
     }
 });
-// Logout-Logik
+
+
+// 3. Logout Logik
 async function logout() {
     const { error } = await supa.auth.signOut();
     if (error) {
-        console.error("Fehler beim Abmelden:", error);
+        console.error("Error during logout:", error);
     } else {
         updateUserStatus(null);
-        console.log("Benutzer erfolgreich abgemeldet.");
+        console.log("User logged out successfully.");
     }
 }
 
-// Skript überprüft, ob sich die Anwendung auf der Root des Servers befindet
+// Script prüft, ob wir uns auf der Root des Servers befinden
 window.addEventListener('DOMContentLoaded', (event) => {
     const rootCheckElem = document.getElementById('rootCheck');
     
     if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-        rootCheckElem.textContent = "Du befindest dich auf der Root des Servers.";
-        rootCheckElem.style.display = "none"; // Verberge es, wenn keine Nachricht auf der Rootseite angezeigt werden soll
+        rootCheckElem.textContent = "You are on the root of the server.";
+        rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
     } else {
-        rootCheckElem.innerHTML = 'Die Authentifizierung funktioniert nur auf der Root des Servers! Du befindest dich hier, aber die Authentifizierung funktioniert <a href="https://423521-6.web.fhgr.ch">hier</a>.';
+        rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="https://423521-6.web.fhgr.ch"> da </a>';
     }
 });
