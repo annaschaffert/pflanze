@@ -1,68 +1,70 @@
 import { supa } from "/js/supabase.js";
 
-// Funktion, um Magic Link zu senden
+// Funktion zum Senden eines Magic Links
 async function sendMagicLink() {
     const email = document.getElementById('email').value;
     const { error } = await supa.auth.signIn({ email });
     
     if (error) {
-        console.error("Error sending magic link: ", error.message);
+        console.error("Fehler beim Senden des Magic Links: ", error.message);
     } else {
-        console.log("Magic link sent to ", email);
+        console.log("Magic Link wurde an ", email, " gesendet.");
     }
 }
 
-// Funktion, um User Status zu aktualisieren
+// Funktion zur Aktualisierung des Benutzerstatus
 function updateUserStatus(user) {
     const userStatusElement = document.getElementById('userStatus');
     
     if (user) {
         console.log(user);
-        userStatusElement.textContent = `Authenticated as: ${user.email}`;
-        //window.location.href = "/meine-pflanzen.html";
+        userStatusElement.textContent = `Angemeldet als: ${user.email}`;
+    
     } else {
-        userStatusElement.textContent = "Not authenticated.";
+        userStatusElement.textContent = "Nicht angemeldet.";
     }
 }
 
-// Prüfe und zeige den initialen User Status an
+// Prüfe und zeige den anfänglichen Benutzerstatus an
 const initialUser = supa.auth.user();
 updateUserStatus(initialUser);
 
-// Eventlistener für Magic Link Button
+// Eventlistener für den Magic Link Button
 document.getElementById('sendMagicLinkButton').addEventListener('click', sendMagicLink);
 
-// Listener, für Änderungen des Auth Status
-// UserStatus wird aktualisiert, wenn sich der Auth Status ändert
+// Listener für Änderungen des Authentifizierungsstatus
+// Der Benutzerstatus wird aktualisiert, wenn sich der Authentifizierungsstatus ändert
 supa.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN") {
-        console.log("User signed in: ", session.user);
+        console.log("Benutzer angemeldet: ", session.user);
         updateUserStatus(session.user);
+
+        // Weiterleitung zur Seite "meine-pflanzen.html"
+        window.location.href = "meine-pflanzen.html";
     } else if (event === "SIGNED_OUT") {
-        console.log("User signed out");
+        console.log("Benutzer abgemeldet");
         updateUserStatus(null);
     }
 });
-
-// 3. Logout Logik
+// Logout-Logik
 async function logout() {
     const { error } = await supa.auth.signOut();
     if (error) {
-        console.error("Error during logout:", error);
+        console.error("Fehler beim Abmelden:", error);
     } else {
         updateUserStatus(null);
-        console.log("User logged out successfully.");
+        console.log("Benutzer erfolgreich abgemeldet.");
     }
 }
 
-// Script prüft, ob wir uns auf der Root des Servers befinden
+// Skript überprüft, ob sich die Anwendung auf der Root des Servers befindet
 window.addEventListener('DOMContentLoaded', (event) => {
     const rootCheckElem = document.getElementById('rootCheck');
     
     if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-        rootCheckElem.textContent = "You are on the root of the server.";
-        rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
+        rootCheckElem.textContent = "Du befindest dich auf der Root des Servers.";
+        rootCheckElem.style.display = "none"; // Verberge es, wenn keine Nachricht auf der Rootseite angezeigt werden soll
     } else {
-        rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="https://423521-6.web.fhgr.ch"> da </a>';
+        rootCheckElem.innerHTML = 'Die Authentifizierung funktioniert nur auf der Root des Servers! Du befindest dich hier, aber die Authentifizierung funktioniert <a href="https://423521-6.web.fhgr.ch">hier</a>.';
     }
 });
