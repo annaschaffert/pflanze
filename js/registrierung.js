@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const registrationForm = document.getElementById("registration-form");
     const errorMessage = document.getElementById("error-message");
 
+
+   
+
     registrationForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
@@ -52,12 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     email,
                 },
             ]);
-
+    
             if (error) {
                 console.error('Fehler beim Hinzufügen des Benutzers:', error);
                 return false;
             }
-
+    
             return true;
         } catch (error) {
             console.error('Fehler beim Hinzufügen des Benutzers:', error);
