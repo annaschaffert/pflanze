@@ -42,8 +42,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Hier können Sie die eingegebenen Daten weiterverarbeiten, z.B. an einen Server senden.
         // Fügen Sie die Daten mit Supabase hinzu
 
-        async function addPlantstoDatabase(nickname, species, planted, photo, user_id, location_id) {
+        async function addPlantstoDatabase(nickname, species, planted, photo, location_id) {
             try {
+                const user = supa.auth.user(); // Benutzerdaten abrufen
+                if (!user) {
+                    console.error("Benutzer nicht angemeldet.");
+                    return false;
+                }
+        
+                const user_id = user.id; // Die eindeutige Benutzer-ID
                 const { data, error } = await supa.from('Plant').insert([
                     {
                         nickname,
@@ -51,13 +58,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                         planted,
                         photo,
                         user_id,
-                        location_id
+                        location_id,
                     },
                 ]);
+        
                 if (error) {
                     console.error('Fehler beim Hinzufügen der Pflanze:', error);
                     return false;
                 }
+        
                 console.log('Pflanze wurde erfolgreich hinzugefügt:', data);
                 return true;
             } catch (error) {
