@@ -1,17 +1,20 @@
 import { supa } from "../js/supabase.js";
 
-
+// Warte, bis das DOM vollständig geladen ist
 document.addEventListener("DOMContentLoaded", function () {
+    // Holen Sie sich die Referenzen zu den HTML-Elementen
     const registrationForm = document.getElementById("registration-form");
     const errorMessage = document.getElementById("error-message");
 
+    // Füge einen Eventlistener zum Absenden des Formulars hinzu
     registrationForm.addEventListener("submit", async function (event) {
+        // Verhindere das Standardverhalten des Formulars (Seitenneuladen)
         event.preventDefault();
 
+        // Holen Sie sich die Werte aus den Eingabefeldern
         const vorname = document.getElementById("vorname").value;
         const nachname = document.getElementById("nachname").value;
         const email = document.getElementById("email-registrierung").value;
-        const registrierungButton = document.querySelector(".button_registrierung");
 
         // Überprüfen, ob die E-Mail bereits in der Datenbank existiert
         if (await isEmailExists(email)) {
@@ -35,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         registrationForm.reset();
     });
 
+    // Funktion zum Überprüfen, ob die E-Mail bereits existiert
     async function isEmailExists(email) {
         const { data, error } = await supa
             .from('User')
@@ -44,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return data && data.length > 0;
     }
 
+    // Funktion zum Hinzufügen eines Benutzers zur Datenbank
     async function addUserToDatabase(first_name, last_name, email) {
         try {
             const { data, error } = await supa.from('User').insert([
