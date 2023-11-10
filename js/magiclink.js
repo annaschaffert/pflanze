@@ -12,16 +12,20 @@ async function sendMagicLink() {
     }
 }
 
+
 // Funktion, um User Status zu aktualisieren
 function updateUserStatus(user) {
     const userStatusElement = document.getElementById('userStatus');
     
     if (user) {
+        console.log("User")
         userStatusElement.textContent = `Authenticated as: ${user.email}`;
+       window.location.href = "/meine-pflanzen.html";
     } else {
         userStatusElement.textContent = "Not authenticated.";
     }
 }
+
 
 // Prüfe und zeige den initialen User Status an
 const initialUser = supa.auth.user();
