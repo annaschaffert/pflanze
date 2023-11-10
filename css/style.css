@@ -821,6 +821,7 @@ button#button_loeschen{
     margin: 0 auto;
     display: block; /* In einer horizontalen Linie anzeigen */
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .button_logout:hover{
