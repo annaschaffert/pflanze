@@ -22,7 +22,7 @@ function updateUserStatus(user) {
     if (user) {
         console.log("User")
         userStatusElement.textContent = `Authenticated as: ${user.email}`;
-       // window.location.href = "/meine-pflanzen.html";
+      // window.location.href = "/meine-pflanzen.html";
     } else {
         userStatusElement.textContent = "Not authenticated.";
     }
