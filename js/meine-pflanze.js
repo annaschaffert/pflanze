@@ -1,8 +1,5 @@
 import { supa, getSignedUrl } from "/js/supabase.js";
 
-
-
-
 //Start Meine Pflanzen Seite
 
 // SVG-Code für den Standort-Icon
