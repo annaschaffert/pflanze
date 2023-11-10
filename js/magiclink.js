@@ -18,7 +18,7 @@ function updateUserStatus(user) {
     
     if (user) {
         userStatusElement.textContent = `Authenticated as: ${user.email}`;
-        
+        window.location.href = "/meine-pflanzen.html";
     } else {
         userStatusElement.textContent = "Not authenticated.";
     }
