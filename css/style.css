@@ -254,6 +254,15 @@ input[type="email"] {
 
 /*pflanze-hinzufügen*/
 
+#Pflanzen-hinzufuegen-Titel{
+    margin-bottom: 20px;
+}
+
+#Pflanzen-hinzufuegen-Untertitel{
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
 .button_hinzufuegen {
     padding: 10px 20px;
     background-color: #323232;
@@ -393,6 +402,18 @@ input#planted-hinzuefuegen{
     font-family: Roboto;
     font-weight: 200;
 }
+
+#error-notification{
+    display: none; 
+    color: #589A8D;
+    font-family: Roboto;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+
 
 /*pflanze-hinzufügen-bestätigung*/
 
@@ -1051,6 +1072,8 @@ button#speichern_knopf{
     white-space: normal; /* Erlaubt Zeilenumbrüche */
 }
 
+
+
 .button_hinzufuegen {
     width: 155px; 
     height: 34px;
@@ -1101,6 +1124,11 @@ input#planted-hinzuefuegen{
     width: 323px; 
     
 }
+
+#error-notification{
+    font-size: 14px;
+}
+
 
 /*-------------------Seite Registrierung----------------------*/
 
