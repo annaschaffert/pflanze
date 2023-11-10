@@ -32,24 +32,7 @@
     <script type="module" src="js/meine-pflanze.js"></script>
     <!-- <script type="module" src="solution_api.js"></script> -->
     
-<script>
-    document.addEventListener("DOMContentLoaded", async function () {
-    const buttonLogout = document.querySelector(".button_logout");
 
-    buttonLogout.addEventListener("click", async function () {
-        try {
-            // Benutzer abmelden
-            await supa.auth.signOut();
-
-            // Weiterleitung zur Index-Seite
-            window.location.href = "index.html";
-        } catch (error) {
-            console.error("Fehler beim Abmelden:", error);
-        }
-    });
-});
-
-</script>
 </body>
 
 </html>
