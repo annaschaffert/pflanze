@@ -2,56 +2,66 @@ import { supa } from "../js/supabase.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const registrationForm = document.getElementById("registration-form");
-  
-    registrationForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      const vorname = document.getElementById("vorname").value;
-      const nachname = document.getElementById("nachname").value;
-      const email = document.getElementById("email-registrierung").value;
-      const registrierungButton = document.querySelector(".button_registrierung"); // Aktualisierte Zeile
+    const errorMessage = document.getElementById("error-message");
 
-  
-      // Hier können Sie die eingegebenen Daten weiterverarbeiten, z.B. an einen Server senden.
-      
-      // hinzufügen der daten mit supa
-        addUserToDatabase(vorname, nachname, email);
+    registrationForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-        async function addUserToDatabase(first_name, last_name, email) {
-            try {
-              const { data, error } = await supa.from('User').insert([
+        const vorname = document.getElementById("vorname").value;
+        const nachname = document.getElementById("nachname").value;
+        const email = document.getElementById("email-registrierung").value;
+        const registrierungButton = document.querySelector(".button_registrierung");
+
+        // Überprüfen, ob die E-Mail bereits in der Datenbank existiert
+        if (await isEmailExists(email)) {
+            errorMessage.textContent = 'Die E-Mail-Adresse existiert bereits.';
+            return;
+        } else {
+            errorMessage.textContent = ''; // Fehlermeldung löschen, wenn keine Fehler vorhanden sind
+        }
+
+        // Fügen Sie den Benutzer nur hinzu, wenn die E-Mail eindeutig ist
+        const added = await addUserToDatabase(vorname, nachname, email);
+        if (added) {
+            console.log('Benutzer wurde erfolgreich hinzugefügt.');
+            // Hier die Weiterleitung zur "meine-pflanzen" Seite
+            window.location.href = "meine-pflanzen.html";
+        } else {
+            console.error('Fehler beim Hinzufügen des Benutzers.');
+        }
+
+        // Zurücksetzen des Formulars (optional)
+        registrationForm.reset();
+    });
+
+    async function isEmailExists(email) {
+        const { data, error } = await supa
+            .from('User')
+            .select('id')
+            .eq('email', email);
+
+        return data && data.length > 0;
+    }
+
+    async function addUserToDatabase(first_name, last_name, email) {
+        try {
+            const { data, error } = await supa.from('User').insert([
                 {
-                  first_name,
-                  last_name,
-                  email,
+                    first_name,
+                    last_name,
+                    email,
                 },
-              ]);
-          
-              if (error) {
+            ]);
+
+            if (error) {
                 console.error('Fehler beim Hinzufügen des Benutzers:', error);
                 return false;
-              }
-          
-              console.log('Benutzer wurde erfolgreich hinzugefügt:', data);
-              // Hier die Weiterleitung zur "meine-pflanzen" Seite
-              window.location.href = "meine-pflanzen.html";
-     
-            } catch (error) {
-              console.error('Fehler beim Hinzufügen des Benutzers:', error);
-              return false;
             }
-          }
-      // Beispiel: Ausgabe der Daten in der Konsole
-      console.log("Vorname: " + vorname);
-      console.log("Nachname: " + nachname);
-      console.log("E-Mail-Adresse: " + email);
 
-      // Hier ist die Verbindung mit dem Button für die Weiterleitung zur "meine-pflanzen" Seite
-      registrierungButton.addEventListener("click", function () {
-      
-  
-      // Zurücksetzen des Formulars (optional)
-      registrationForm.reset();
-      });
-    });
-  });
+            return true;
+        } catch (error) {
+            console.error('Fehler beim Hinzufügen des Benutzers:', error);
+            return false;
+        }
+    }
+});
