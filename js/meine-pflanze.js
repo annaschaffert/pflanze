@@ -85,6 +85,7 @@ async function showPlantsInGrid() {
 }
 
 
+
 // Button Pflanze hinzufügen
 document.addEventListener("DOMContentLoaded", async function () {
     const buttonHinzufuegen = document.querySelector(".button_pflanze_hinzufuegen");
@@ -92,6 +93,23 @@ document.addEventListener("DOMContentLoaded", async function () {
     buttonHinzufuegen.addEventListener("click", function () {
         window.location.href = "pflanze-hinzufuegen.html";
     });
+});
+
+// Funktion für das Abmelden
+async function logoutUser() {
+    try {
+        await supa.auth.signOut();
+        window.location.href = "index.html"; // Weiterleitung zur Index-Seite
+    } catch (error) {
+        console.error("Fehler beim Abmelden:", error);
+    }
+}
+
+// Button Logout hinzufügen
+document.addEventListener("DOMContentLoaded", async function () {
+    const buttonLogout = document.querySelector(".button_logout");
+
+    buttonLogout.addEventListener("click", logoutUser);
 });
 
 showPlantsInGrid();
