@@ -1,11 +1,9 @@
 import { supa } from "../js/supabase.js";
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const registrationForm = document.getElementById("registration-form");
     const errorMessage = document.getElementById("error-message");
-
-
-   
 
     registrationForm.addEventListener("submit", async function (event) {
         event.preventDefault();
