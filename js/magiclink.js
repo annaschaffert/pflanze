@@ -18,6 +18,7 @@ function updateUserStatus(user) {
     
     if (user) {
         userStatusElement.textContent = `Authenticated as: ${user.email}`;
+        
     } else {
         userStatusElement.textContent = "Not authenticated.";
     }
