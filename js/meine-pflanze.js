@@ -31,7 +31,6 @@ const pflanzenartIcon = `
 
 
 
-
 // ...
 
 function formatDate(dateString) {
@@ -84,10 +83,8 @@ async function showPlantsInGrid() {
     });
 }
 
-
-
 // Button Pflanze hinzufügen
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     const buttonHinzufuegen = document.querySelector(".button_pflanze_hinzufuegen");
 
     buttonHinzufuegen.addEventListener("click", function () {
@@ -98,7 +95,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Funktion für das Abmelden
 async function logoutUser() {
     try {
+        console.log("Logout wird versucht...");
         await supa.auth.signOut();
+        console.log("Erfolgreich abgemeldet.");
         window.location.href = "index.html"; // Weiterleitung zur Index-Seite
     } catch (error) {
         console.error("Fehler beim Abmelden:", error);
@@ -106,10 +105,12 @@ async function logoutUser() {
 }
 
 // Button Logout hinzufügen
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     const buttonLogout = document.querySelector(".button_logout");
 
-    buttonLogout.addEventListener("click", logoutUser);
+    buttonLogout.addEventListener("click", function () {
+        logoutUser();
+    });
 });
 
 showPlantsInGrid();
