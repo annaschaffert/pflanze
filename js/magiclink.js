@@ -21,6 +21,7 @@ function updateUserStatus(user) {
         window.location.href = "/meine-pflanzen.html";
     } else {
         userStatusElement.textContent = "Not authenticated.";
+        window.location.href = "/index.html";
     }
 }
 
