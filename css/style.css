@@ -9,7 +9,6 @@ body{
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Knewave&family=Montserrat:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-
 /*Hauptite - Plant Aid*/
 h1{
     color: #323232;
@@ -63,7 +62,6 @@ h5{
     font-weight: 300;
     line-height: 30px; 
 }
-
 
 /* Fliesstext - Text unterhalb Titel*/
 p{
@@ -172,7 +170,6 @@ p{
     color: #323232;
 }
   
-
 
 /*Registrierungs-Seite*/
 
@@ -366,7 +363,6 @@ input#planted-hinzuefuegen{
     padding-left: 7px;
 }
 
-
 /* CSS für das Dropdown-Menü */
 .courses {
     display: none;
@@ -427,7 +423,6 @@ input#planted-hinzuefuegen{
     color: #fff;
 }
 
-
 /*Pflanzen Profil Seite*/
 
 #merkmale_defintionen{
@@ -446,7 +441,6 @@ input#planted-hinzuefuegen{
     flex-direction: column;
     justify-content: center;
 }
-
 
 #buttonContainer {
     display: flex;
@@ -479,7 +473,6 @@ input#planted-hinzuefuegen{
     margin-top: 35px;
 
 }
-
 
 .button_loeschen:hover,
 .button_bearbeiten:hover {
@@ -620,7 +613,6 @@ button#button_loeschen{
     margin-right: 200px;
 }
 
-
 /*Seite Bestätigung Pflanze bearbeiten*/
 .button_meine_pflanzen{
     padding: 10px 0;
@@ -675,7 +667,6 @@ button#button_loeschen{
     background-color: #589A8D; 
     color: #fff;
 }
-
 
 /* Übersicht Seite - Meine Pflanzen*/
 #meine-pflanzen-haupttitel {
@@ -759,7 +750,6 @@ button#button_loeschen{
     margin-top: -2px;
 }
 
-
 /*Als Info: den "Mehr" Button haben wir auf bearebiten & löschen geändert, aber hier drin heisst er noch mehr-button, deshalb müssen wir hier noch mehr-button schreiben, sonst funktioniert es nicht*/
 .button_mehr {
     padding: 10px 20px;
@@ -821,13 +811,13 @@ button#button_loeschen{
     margin: 0 auto;
     display: block; /* In einer horizontalen Linie anzeigen */
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .button_logout:hover{
     background-color: #323232;
     color: #fff;
 }
-
 
 
 
@@ -930,7 +920,6 @@ button#button_loeschen{
     font-size: 11px;
 }
 
-
 .button_logout {
     padding: 5px 0;
     width: 120px; /* Breite der Buttons, kann nach Bedarf angepasst werden */
@@ -938,7 +927,6 @@ button#button_loeschen{
     font-size: 9px;
     margin-top: 25px;
 }
-
 
 /*--------------------Pflanzen Profil Übersicht------------------------------*/
 
@@ -1115,7 +1103,6 @@ input#planted-hinzuefuegen{
 }
 
 /*-------------------Seite Registrierung----------------------*/
-
 
 #Hauptitel_Registrierung{
     font-size: 60px;
