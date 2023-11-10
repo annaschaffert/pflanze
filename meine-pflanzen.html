@@ -33,15 +33,21 @@
     <!-- <script type="module" src="solution_api.js"></script> -->
     
 <script>
-    //Verlinkung zur LoginSeite
     document.addEventListener("DOMContentLoaded", async function () {
-    const buttonLogout = document.querySelector(".button_logout"); 
+    const buttonLogout = document.querySelector(".button_logout");
 
-    buttonLogout.addEventListener("click", function () {
-    // Hier setzen Sie die URL, zur LoginSeite ein
-    window.location.href = "index.html";
-     });
-     });
+    buttonLogout.addEventListener("click", async function () {
+        try {
+            // Benutzer abmelden
+            await supa.auth.signOut();
+
+            // Weiterleitung zur Index-Seite
+            window.location.href = "index.html";
+        } catch (error) {
+            console.error("Fehler beim Abmelden:", error);
+        }
+    });
+});
 
 </script>
 </body>
