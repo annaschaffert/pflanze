@@ -68,20 +68,37 @@ document.addEventListener("DOMContentLoaded", async function () {
         // fileupload PHOTO
         async function uploadPhoto() {
             const fileInput = document.getElementById('photo-hinzuefuegen');
-
+          
             if (fileInput.files.length > 0) {
-                const file = fileInput.files[0];
-                const photo = `uploads/${file.name}`;
-                const { error: uploadError } = await supa.storage.from('photos').upload(photo, file);
-                if (uploadError) {
-                    console.error('Fehler beim Hochladen der Datei:', uploadError);
-                    return;
-                }
-                addPlantstoDatabase(nickname, species, planted, photo, user_id, locationId);
-                // Weiterleitung mit Ersetzen
-                window.location.replace("pflanze-hinzufuegen-bestaetigung.html");
+              const file = fileInput.files[0];
+              const photo = `uploads/${file.name}`;
+              const { error: uploadError } = await supa.storage.from('photos').upload(photo, file);
+          
+              if (uploadError) {
+                console.error('Fehler beim Hochladen der Datei:', uploadError);
+                // Anzeige der Fehlermeldung
+                showErrorNotification();
+                return;
+              }
+          
+              const isPlantAdded = await addPlantstoDatabase(nickname, species, planted, photo, user_id, locationId);
+          
+              if (!isPlantAdded) {
+                // Anzeige der Fehlermeldung
+                showErrorNotification();
+                return;
+              }
+          
+              // Weiterleitung mit Ersetzen
+              window.location.replace('pflanze-hinzufuegen-bestaetigung.html');
             }
-        }
+          }
+          
+          function showErrorNotification() {
+            const errorNotification = document.getElementById('error-notification');
+            errorNotification.style.display = 'block';
+          }
+
         uploadPhoto();
         // Beispiel: Ausgabe der Daten in der Konsole
         console.log("Nickname: " + nickname);
